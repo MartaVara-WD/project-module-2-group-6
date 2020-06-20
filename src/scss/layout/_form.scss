@@ -1,0 +1,77 @@
+.form__design{
+    &--title {
+        color: $color-light-dark;
+        text-transform: uppercase;
+        font-family: $font-primary;
+        font-weight: 600;
+        font-size: rem(18);
+        .icon {
+            width: 21px;
+            height: 18px;
+            color: $color-accenture;
+            }
+    }
+    &--subtitle{
+        color: $color-light-dark;
+        text-transform: uppercase;
+        font-family: $font-primary;
+        font-size: rem(14);
+    }
+
+    &--style1 {
+        & .square {
+            width: 30px;
+            height: 25px;
+            display: inline-block;
+        }
+        .one {
+            background-color: $color-primary-dark;
+        }
+        .two {
+            background-color: $color-primary-medium;
+        }
+        .three {
+            background-color: $color-primary-light;
+        }
+    }
+    
+    &--style2 {
+        & .square {
+            width: 30px;
+            height: 25px;
+            display: inline-block;
+        }
+        .one {
+            background-color: #420101;
+        }
+        .two {
+            background-color: #bd1010;
+        }
+        .three {
+            background-color: #e95626;
+        }
+    }
+    
+    &--style3 {
+        & .square {
+            width: 30px;
+            height: 25px;
+            display: inline-block;
+        }
+        .one {
+            background-color: #3e5b65;
+        }
+        .two {
+            background-color: #eab052;
+        }
+        .three {
+            background-color: #a0c0cf;
+        }
+    }
+}
+
+
+
+
+
+
