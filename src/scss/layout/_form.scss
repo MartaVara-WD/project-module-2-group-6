@@ -1,6 +1,6 @@
 .form__design{
     &--title {
-        color: $color-light-dark;
+        color: $color-small-dark;
         text-transform: uppercase;
         font-family: $font-primary;
         font-weight: 600;
@@ -12,7 +12,7 @@
             }
     }
     &--subtitle{
-        color: $color-light-dark;
+        color: $color-small-dark;
         text-transform: uppercase;
         font-family: $font-primary;
         font-size: rem(14);
