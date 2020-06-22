@@ -10,7 +10,7 @@
 }
 
 .form__design{
-    &--title {
+    &__title {
         color: $color-light-dark;
         text-transform: uppercase;
         font-family: $font-primary;
@@ -22,62 +22,88 @@
             color: $color-accenture;
             }
     }
-    &--subtitle{
+    &__subtitle{
         color: $color-light-dark;
         text-transform: uppercase;
         font-family: $font-primary;
         font-size: rem(14);
     }
 
-    &--style1 {
-        & .square {
-            width: 30px;
-            height: 25px;
-            display: inline-block;
+    &__style1 {
+        & .style1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
-        .one {
-            background-color: $color-primary-dark;
+
+        .colors {
+            display: flex;
+            & .square {
+                width: 30px;
+                height: 25px;
+                display: inline-block;
+            }
+            .one {
+                background-color: $color-primary-dark;
+            }
+            .two {
+                background-color: $color-primary-medium;
+            }
+            .three {
+                background-color: $color-primary-light;
+            }
+       }
+        
+    }
+    
+    &__style2 {
+        & .style2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
-        .two {
-            background-color: $color-primary-medium;
-        }
-        .three {
-            background-color: $color-primary-light;
+        .colors {
+            display: flex;
+            & .square {
+                width: 30px;
+                height: 25px;
+                display: inline-block;
+            }
+            .one {
+                background-color: #420101;
+            }
+            .two {
+                background-color: #bd1010;
+            }
+            .three {
+                background-color: #e95626;
+            }
         }
     }
     
-    &--style2 {
-        & .square {
-            width: 30px;
-            height: 25px;
-            display: inline-block;
+    &__style3 {
+        & .style3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
-        .one {
-            background-color: #420101;
-        }
-        .two {
-            background-color: #bd1010;
-        }
-        .three {
-            background-color: #e95626;
-        }
-    }
-    
-    &--style3 {
-        & .square {
-            width: 30px;
-            height: 25px;
-            display: inline-block;
-        }
-        .one {
-            background-color: #3e5b65;
-        }
-        .two {
-            background-color: #eab052;
-        }
-        .three {
-            background-color: #a0c0cf;
-        }
+        .colors {
+            display: flex;
+            & .square {
+                width: 30px;
+                height: 25px;
+                display: inline-block;
+            }
+            .one {
+                background-color: #3e5b65;
+            }
+            .two {
+                background-color: #eab052;
+            }
+            .three {
+                background-color: #a0c0cf;
+            }
+        }       
     }
 }
 
@@ -119,7 +145,7 @@
     }
 }
 .form__share{
-    &--title {
+    &__title {
         color: $color-light-dark;
         text-transform: uppercase;
         font-family: $font-primary;
@@ -131,7 +157,7 @@
             color: $color-accenture;
         }
     }
-    &--button{
+    &__button{
         width: 199px;
         height: 50px;
         border-radius: 12px;
