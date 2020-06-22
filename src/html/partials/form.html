@@ -7,46 +7,50 @@
                 <a href="#"><i class="arrow-up fas fa-angle-down"></i></a>
                 <a href="#"><i class="arrow-down fas fa-angle-up"></i></a>
             </h2>
-            <span class="form__design__subtitle">colores</span>
-            <div class="form__design__style1">
-                <label class="style1">
-                    <div class="option">
-                        <input id="style1" type="radio" value="green" name="style" required>
+            <div class="colors-container">
+                <span class="form__design__subtitle">colores</span>
+                <div class="styles">
+                    <div class="form__design__style1">
+                        <label class="style1">
+                            <div class="option">
+                                <input id="style1" type="radio" value="green" name="style" required>
+                            </div>
+                            <div class="colors">
+                                <div class="square one"></div>
+                                <div class="square two"></div>
+                                <div class="square three"></div>
+                             </div>                   
+                        </label>
                     </div>
-                    <div class="colors">
-                        <div class="square one"></div>
-                        <div class="square two"></div>
-                        <div class="square three"></div>
-                     </div>                   
-                </label>
-            </div>
-            <div class="form__design__style2">
-                <label class="style2">
-                    <div class="option">
-                        <input id="style2" type="radio" value="red" name="style" required/>
+                    <div class="form__design__style2">
+                        <label class="style2">
+                            <div class="option">
+                                <input id="style2" type="radio" value="red" name="style" required/>
+                            </div>
+                            <div class="colors">
+                                <div class="square one"></div>
+                                <div class="square two"></div>
+                                <div class="square three"></div>
+                            </div>
+                        </label>
                     </div>
-                    <div class="colors">
-                        <div class="square one"></div>
-                        <div class="square two"></div>
-                        <div class="square three"></div>
+                    <div class="form__design__style3">
+                        <label class="style3">
+                            <div class="option">
+                                <input id="style3" type="radio" value="colorMix" name="style" required/>                  
+                            </div>
+                            <div class="colors">                    
+                                <div class="square one"></div>
+                                <div class="square two"></div>
+                                <div class="square three"></div>
+                            </div>
+                        </label>
                     </div>
-                </label>
-            </div>
-            <div class="form__design__style3">
-                <label class="style3">
-                    <div class="option">
-                        <input id="style3" type="radio" value="colorMix" name="style" required/>                  
-                    </div>
-                    <div class="colors">                    
-                        <div class="square one"></div>
-                        <div class="square two"></div>
-                        <div class="square three"></div>
-                    </div>
-                </label>
+                </div>            
             </div>
         </section>
-        <section class="form_section">
-            <div class ="signup">
+        <section class="form__section">
+            <div class ="form__section__signup">
                 <label for="first-name"> Nombre Completo</label>
                 <input 
                 placeholder="Ej: Merche Lios" 
@@ -94,6 +98,7 @@
                 />
                 <label for="github">Github</label>
                 <input 
+                class="github"
                 placeholder="Ej:@merchelios" 
                 id="github" 
                 type="text" 
