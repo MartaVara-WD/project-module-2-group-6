@@ -6,12 +6,17 @@
 .imagen {
   width: 100%;
   height: 457px;
-  background-color: pink;
+  background-color:$color-background;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+button{
+  background-color:$color-background;
+}
+
 .button-reset {
   padding-left: 10px;
   padding-right: 12px;
@@ -24,6 +29,7 @@
   border: solid 1px white;
   border-radius: 15px;
   margin-bottom: 20px;
+  background-color: $color-background;
 }
 .word-reset {
   font-family: $font-primary;
