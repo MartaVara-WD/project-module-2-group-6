@@ -1,6 +1,9 @@
 /*Fondo general main*/
 .page__main {
   background-color: $color-tertiary-light;
+  @include tablet {
+    display: flex;
+  }
 }
 
 .imagen {
@@ -11,6 +14,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include tablet {
+    order: 2;
+    width: 500px;
+    height: 1000px;
+  }
 }
 
 button{
