@@ -3,6 +3,7 @@
   background-color: $color-tertiary-light;
   @include tablet {
     display: flex;
+    justify-content: center;
   }
 }
 
@@ -16,8 +17,10 @@
   justify-content: center;
   @include tablet {
     order: 2;
-    width: 500px;
-    height: 1000px;
+    width: 329px;
+    margin: 20px 0;
+    height: auto;  
+    border-radius: 10px;
   }
 }
 
