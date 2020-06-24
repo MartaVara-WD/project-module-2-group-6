@@ -1,11 +1,24 @@
 .front {
+  background-color: $color-tertiary-light;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  // height: 60vh;
+
+  &__wrapper {
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  // @include tablet {
+  //   height: 50vh;
+  // }
 
   &__text {
     text-align: center;
+
     &__title {
       font-family: $font-tertiary;
       font-size: rem(24);
@@ -44,9 +57,13 @@
 
     & p {
       font-size: rem(12.8);
+      margin-left: 5px;
       color: $color-light-dark;
     }
+    .far,
     .fa {
+      margin-left: 5px;
+      line-height: normal;
       color: $color-accenture;
     }
   }
@@ -56,20 +73,24 @@
     margin-bottom: 30px;
     width: 129px;
     height: 42px;
+    line-height: 21.5px;
     background-color: $color-primary-medium;
     color: $color-light;
     text-align: center;
     text-transform: uppercase;
     padding-top: 10px;
     border-radius: rem(21);
+    transition: background-color ease-in 0.5s;
+
+    &:hover {
+      animation: pulse 1s;
+      animation-iteration-count: infinite;
+      background-color: $color-accenture;
+    }
 
     @include tablet {
       margin-top: 186px;
-      margin-bottom: 56px;
-    }
-
-    &__share {
-      margin-left: 20px;
+      margin-bottom: 59px;
     }
   }
 }
