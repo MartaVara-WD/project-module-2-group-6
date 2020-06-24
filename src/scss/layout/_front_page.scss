@@ -12,9 +12,9 @@
     }
   }
 
-  @include tablet {
-    height: 50vh;
-  }
+  // @include tablet {
+  //   height: 50vh;
+  // }
 
   &__text {
     text-align: center;
@@ -91,10 +91,6 @@
     @include tablet {
       margin-top: 186px;
       margin-bottom: 59px;
-    }
-
-    &__share {
-      margin-left: 20px;
     }
   }
 }
