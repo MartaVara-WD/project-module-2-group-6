@@ -1,18 +1,24 @@
 .header {
+  background-color: $color-tertiary-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &__logo {
     margin-top: 95px;
     margin-bottom: 35.4px;
     width: 250px;
     height: 63px;
 
+    @include tablet {
+      margin-top: 350px;
+      margin-bottom: 31px;
+      width: 419px;
+      height: 105px;
+    }
+
     & img {
       width: 100%;
     }
-  }
-
-  & .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }

@@ -1,16 +1,25 @@
 .form {
+  .arrow {
+    position: absolute;
+    right: 0;
+  }
+  .arrow-down {
+    display: none;
+  }
     .wrapper {
         padding: 30px 20px;
         margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
+
         @include tablet {
           padding: 30px 40px;
         }
       }
       
       &__design {
+        position: relative;
         &__title {
           color: $color-light-dark;
           text-transform: uppercase;
@@ -126,6 +135,23 @@
         border-top: 1px solid $color-form-medium;
         width: 320px;
         margin: auto;
+
+        &__title {
+          margin-top:10px;
+          display:flex;
+          flex-direction: row;
+          color: $color-light-dark;
+          font-family: $font-primary;
+          font-weight: 600;
+          font-size: rem(18);
+          text-transform: uppercase;
+
+          .icon {
+            width: 21px;
+            height: 18px;
+            color: $color-accenture;
+          }
+        }
       
         &__signup {
           display: block;
@@ -149,14 +175,27 @@
             margin-top: 7px;
             margin-bottom: 10px;
             width: 100%;
+            height: 45px;
             padding: 10px;
             display: block;
             text-align: left;
             border: 1px solid $color-primary-light;
-            height: 45px;
+            background-color: $color-tertiary-light;
             font-family: $font-primary;
             font-size: 14px;
             color: $color-form-light;
+           
+          }
+
+          .btn-image {
+            width: 140px;
+            height: 30px;
+            border-radius: 6px;
+            text-align: center;
+            background-color: $color-accenture;
+            font-size: rem(14);
+            color: $color-light;
+            font-family: $font-primary;
           }
           .github {
             margin-bottom: 20px;
@@ -164,6 +203,7 @@
         }
       }
       &__share {
+        position: relative;
         border-top: 1px solid $color-form-medium;
       
         &__title {
@@ -199,95 +239,5 @@
           }
         }
       }
-      .one {
-        background-color: #3e5b65;
-      }
-      .two {
-        background-color: #eab052;
-      }
-      .three {
-        background-color: #a0c0cf;
-      }
-}
-
-
-.form__section {
-  border-top: 1px solid $color-form-medium;
-  width: 320px;
-  margin: auto;
-
-  &__signup {
-    display: block;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-
-    label {
-      width: 100%;
-      height: 45px;
-      padding-top: 15px;
-      margin-top: 10px;
-      display: block;
-      text-align: left;
-      font-family: $font-primary;
-      color: $color-primary-dark;
-    }
-
-    input {
-      margin-top: 7px;
-      margin-bottom: 10px;
-      width: 100%;
-      padding: 10px;
-      display: block;
-      text-align: left;
-      border: 1px solid $color-primary-light;
-      height: 45px;
-      font-family: $font-primary;
-      font-size: 14px;
-      color: $color-form-light;
-    }
-    .github {
-      margin-bottom: 20px;
-    }
-  }
-}
-.form__share {
-  border-top: 1px solid $color-form-medium;
-
-  &__title {
-    margin-top: 10px;
-    color: $color-light-dark;
-    text-transform: uppercase;
-    font-family: $font-primary;
-    font-weight: 600;
-    font-size: rem(18);
-    .icon {
-      width: 21px;
-      height: 18px;
-      color: $color-accenture;
-    }
-  }
-  &__button {
-    margin: 60px auto;
-    width: 199px;
-    height: 50px;
-    border-radius: 12px;
-    text-align: center;
-    padding: 13px 17px;
-    background-color: $color-accenture;
-    font-size: rem(18);
-    color: $color-light;
-    text-transform: uppercase;
-    font-family: $font-primary;
-    .logo {
-      width: 25px;
-      height: 22px;
-      color: $color-light;
-      text-align: center;
-    }
-    button{
-      background-color: $color-accenture;
-    }
-  }
+    
 }
