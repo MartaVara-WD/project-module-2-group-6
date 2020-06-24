@@ -1,4 +1,11 @@
 .form {
+  .arrow {
+    position: absolute;
+    right: 0;
+  }
+  .arrow-down {
+    display: none;
+  }
     .wrapper {
         padding: 30px 20px;
         margin: auto;
@@ -11,6 +18,7 @@
       }
       
       &__design {
+        position: relative;
         &__title {
           color: $color-light-dark;
           text-transform: uppercase;
@@ -164,6 +172,7 @@
         }
       }
       &__share {
+        position: relative;
         border-top: 1px solid $color-form-medium;
       
         &__title {
