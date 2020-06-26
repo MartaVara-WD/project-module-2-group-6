@@ -229,13 +229,17 @@
           background-color: $color-accenture;
           font-size: rem(18);
           color: $color-light;
-          text-transform: uppercase;
           font-family: $font-primary;
           .logo {
             width: 25px;
             height: 22px;
             color: $color-light;
             text-align: center;
+          }
+          button{
+            background-color: $color-accenture;
+            text-transform: uppercase;
+            font-weight: 400;
           }
         }
       }
