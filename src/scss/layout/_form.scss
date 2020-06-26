@@ -1,13 +1,11 @@
 .form {
-  .arrow {
+  & .click {
     position: absolute;
     right: 0;
   }
   .arrow-down {
     display: none;
   }
-
-
 
     .wrapper {
         padding: 30px 20px;

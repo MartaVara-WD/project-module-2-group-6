@@ -1,5 +1,5 @@
-'use strict'
-console.log (07);
+'use strict';
+console.log(07);
 
 const click = document.querySelector('.arrow');
 const section = document.querySelector('.colors-container');
