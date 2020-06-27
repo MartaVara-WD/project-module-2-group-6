@@ -1,12 +1,9 @@
 .form {
   & .click {
+    display: inline-block;
     position: absolute;
     right: 0;
   }
-  .arrow-down {
-    display: none;
-  }
-
     .wrapper {
         padding: 30px 20px;
         margin: auto;
