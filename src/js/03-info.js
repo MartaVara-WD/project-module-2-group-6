@@ -1,13 +1,13 @@
-"use strict";
+'use strict';
 
-const inputName = document.querySelector(".js-name");
-const inputJob = document.querySelector(".js-job");
-// const inputPhone = document.querySelector(".js-phone");
-// const inputEmail = document.querySelector(".js-email");
-// const inputLinkedin = document.querySelector(".js-linkedin");
-// const inputGithub = document.querySelector(".js-github");
-const printName = document.querySelector(".card__top__title__name");
-const printJob = document.querySelector(".card__top__title__role");
+const inputName = document.querySelector('.js-name');
+const inputJob = document.querySelector('.js-job');
+// const inputPhone = document.querySelector('.js-phone');
+// const inputEmail = document.querySelector('.js-email');
+// const inputLinkedin = document.querySelector('.js-linkedin');
+// const inputGithub = document.querySelector('.js-github');
+const printName = document.querySelector('.card__top__title__name');
+const printJob = document.querySelector('.card__top__title__role');
 
 //empty object
 
@@ -34,6 +34,6 @@ function printUserData() {
   sendUserData();
 }
 
-// inputName.addEventListener("keyup", saveFormValues);
-inputName.addEventListener("keyup", printUserData);
-inputJob.addEventListener("keyup", printUserData);
+// inputName.addEventListener('keyup', saveFormValues);
+inputName.addEventListener('keyup', printUserData);
+inputJob.addEventListener('keyup', printUserData);
