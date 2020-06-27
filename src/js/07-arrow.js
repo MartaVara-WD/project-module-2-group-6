@@ -25,3 +25,18 @@ function displayArrow2() {
 }
 
 click2.addEventListener ('click', displayArrow2);
+
+// share
+const click3 = document.querySelector('.click3');
+const section3 = document.querySelector('.form__share__button');
+const arrowDown3 = document.querySelector('.arrow-down3');
+const arrowUp3 = document.querySelector('.arrow-up3');
+
+function displayArrow3() {
+  console.log('share');
+  section3.classList.toggle('hidden');
+  arrowUp3.classList.toggle('hidden');
+  arrowDown3.classList.toggle('hidden');
+}
+
+click3.addEventListener('click', displayArrow3);
