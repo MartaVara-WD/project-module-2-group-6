@@ -134,11 +134,11 @@
         border-top: 1px solid $color-form-medium;
         width: 320px;
         margin: auto;
+        position: relative;
+
 
         &__title {
           margin-top:10px;
-          display:flex;
-          flex-direction: row;
           color: $color-light-dark;
           font-family: $font-primary;
           font-weight: 600;
