@@ -10,7 +10,7 @@ const printPhone = document.querySelector('.js-phone-icon');
 const printName = document.querySelector('.card__top__title__name');
 const printJob = document.querySelector('.card__top__title__role');
 const printEmail = document.querySelector('.js-email-icon');
-const printLinkedin = document.querySelector('.js-linkedin-email');
+const printLinkedin = document.querySelector('.js-linkedin-icon');
 
 //empty object
 
@@ -38,7 +38,7 @@ function sendUserData() {
   printJob.innerHTML = userData.job;
   printPhone.href = `tel:` + userData.phone;
   printEmail.href = `mailto:` + userData.email;
-  printLinkedin.href = `http:` userData.linkedin; // HAY QUE MIRAR ESTO.
+  printLinkedin.href = `https://es.linkedin.com/` + userData.linkedin;
 }
 
 // esta hace magia y lo cambia en la tarjeta
