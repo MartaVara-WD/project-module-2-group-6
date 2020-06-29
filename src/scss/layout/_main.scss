@@ -1,5 +1,6 @@
 /*Fondo general main*/
 .page__main {
+  min-height: 500px;
   background-color: $color-tertiary-light;
   @include tablet {
     display: flex;
