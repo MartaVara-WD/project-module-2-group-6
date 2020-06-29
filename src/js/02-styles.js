@@ -5,7 +5,7 @@ const style2 = document.querySelector('.style2');
 const style3 = document.querySelector('.style3');
 
 function handlerStyle() {
-    //Muestra cuál es el evento actual//
+  //Muestra cuál es el evento actual//
   console.log(event.currentTarget.classList);
   if(event.currentTarget.classList.value === 'style1'){
     console.log(`Ha elegido el estilo 1`);

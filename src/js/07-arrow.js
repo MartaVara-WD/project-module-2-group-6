@@ -33,7 +33,6 @@ const arrowDown3 = document.querySelector('.arrow-down3');
 const arrowUp3 = document.querySelector('.arrow-up3');
 
 function displayArrow3() {
-  console.log('share');
   section3.classList.toggle('hidden');
   arrowUp3.classList.toggle('hidden');
   arrowDown3.classList.toggle('hidden');
