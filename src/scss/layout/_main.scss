@@ -1,4 +1,5 @@
 /*Fondo general main*/
+
 .page__main {
   min-height: 500px;
   background-color: $color-tertiary-light;
@@ -79,6 +80,7 @@
         font-family: $font-secondary;
         text-transform: capitalize;
         font-weight: 700;
+        color: $color-primary-dark;
       }
       &__role {
         font-size: 16px;
@@ -113,7 +115,7 @@
     align-items: flex-start;
     width: 100%;
     padding-left: 20px;
-    & li {
+    & .border {
       display: block;
       text-align: center;
       padding-top: 4px;
@@ -121,14 +123,14 @@
       margin-right: 9px;
       height: 32px;
       width: 32px;
-      color: $color-primary-dark;
       border: solid 2px $color-primary-light;
       border-radius: 100%;
-      &:hover {
+      color: $color-primary-dark;
+      /*&:hover {
         background-color: $color-primary-light;
-      }
+      }*/
     }
-    & i {
+    & .icon {
       padding-left: 1px;
       font-size: 20px;
     }
@@ -136,6 +138,3 @@
 }
 
 
-.red {
-  color: #420101;
-  }
