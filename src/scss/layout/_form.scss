@@ -19,6 +19,7 @@
   }
 
   &__design {
+    width: 320px;
     position: relative;
     margin-bottom: 10px;
     &__title {
@@ -146,9 +147,10 @@
       font-size: rem(18);
       text-transform: uppercase;
 
-      .icon {
-        width: 21px;
-        height: 18px;
+      .far,
+      .fa {
+        margin-bottom: 10px;
+        line-height: normal;
         color: $color-accenture;
       }
     }
@@ -183,7 +185,7 @@
         background-color: $color-tertiary-light;
         font-family: $font-primary;
         font-size: 14px;
-        color: $color-form-light;
+        color: $color-light-dark;
       }
 
       .btn-image {
@@ -202,6 +204,7 @@
     }
   }
   &__share {
+    width: 320px;
     position: relative;
     border-top: 1px solid $color-form-medium;
 

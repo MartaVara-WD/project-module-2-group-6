@@ -5,12 +5,13 @@ const inputJob = document.querySelector('.js-job');
 const inputPhone = document.querySelector('.js-phone');
 const inputEmail = document.querySelector('.js-email');
 const inputLinkedin = document.querySelector('.js-linkedin');
-// const inputGithub = document.querySelector('.js-github');
+const inputGithub = document.querySelector('.js-github');
 const printPhone = document.querySelector('.js-phone-icon');
 const printName = document.querySelector('.card__top__title__name');
 const printJob = document.querySelector('.card__top__title__role');
 const printEmail = document.querySelector('.js-email-icon');
-const printLinkedin = document.querySelector('.js-linkedin-email');
+const printLinkedin = document.querySelector('.js-linkedin-print');
+const printGithub = document.querySelector('.js-github-print');
 
 //empty object
 
@@ -24,12 +25,14 @@ function saveFormValues() {
   userData.phone = inputPhone.value;
   userData.email = inputEmail.value;
   userData.linkedin = inputLinkedin.value;
+  userData.github = inputGithub.value;
 
   console.log(userData.name);
   console.log(userData.job);
   console.log(userData.phone);
   console.log(userData.email);
   console.log(userData.linkedin);
+  console.log(userData.github);
 }
 
 //envía los datos a la tarjeta
@@ -38,7 +41,8 @@ function sendUserData() {
   printJob.innerHTML = userData.job;
   printPhone.href = `tel:` + userData.phone;
   printEmail.href = `mailto:` + userData.email;
-  printLinkedin.href = `http:` userData.linkedin; // HAY QUE MIRAR ESTO.
+  printLinkedin.href = `https://www.linkedin.com/in/` + userData.linkedin;
+  printGithub.href = `https://github.com/` + userData.github;
 }
 
 // esta hace magia y lo cambia en la tarjeta
@@ -47,9 +51,9 @@ function printUserData() {
   sendUserData();
 }
 
-// inputName.addEventListener('keyup', saveFormValues);
 inputName.addEventListener('keyup', printUserData);
 inputJob.addEventListener('keyup', printUserData);
 inputPhone.addEventListener('keyup', printUserData);
 inputEmail.addEventListener('keyup', printUserData);
 inputLinkedin.addEventListener('keyup', printUserData);
+inputGithub.addEventListener('keyup', printUserData);
