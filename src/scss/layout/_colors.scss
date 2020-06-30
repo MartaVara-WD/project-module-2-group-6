@@ -25,28 +25,28 @@
 
 /*aplica a const styleYellow*/
 
-// .light-blue-2 {
-//   border: 2px solid #a0c0cf;
-// }
+.light-blue-2 {
+  border: 2px solid #a0c0cf;
+}
 
-// .dark-blue-2 {
-//   color: #3e5b65;
-// }
+.dark-blue-2 {
+  color: #3e5b65;
+}
 
-// .medium-yellow {
-//   background-color: #eab052;
-// }
+.medium-yellow {
+  background-color: #eab052;
+}
 
 /*aplica a const styleBlue*/
 
-// .light-blue {
-//   border: $color-primary-light;
-// }
+.light-blue {
+  border: solid 2px $color-primary-light;
+}
 
-// .dark-blue {
-//   color: color-primary-dark;
-// }
+.dark-blue {
+  color: $color-primary-dark;
+}
 
-// .medium-blue {
-//   background-color: $color-primary-medium;
-// }
+.medium-blue {
+  background-color: $color-primary-medium;
+}
