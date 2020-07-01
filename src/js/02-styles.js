@@ -14,7 +14,7 @@ function handlerStyle() {
     console.log('Ha elegido el estilo 1');
     changeColors('dark-blue', 'medium-blue', 'light-blue');
     removeColors('dark-red', 'medium-red', 'light-red');
-    changeColors2('dark-blue-2', 'medium-yellow', 'light-blue-2');
+    removeColors2('dark-blue-2', 'medium-yellow', 'light-blue-2');
   } else if (event.currentTarget.classList.value === 'style2') {
     console.log('Ha elegido el estilo 2');
     changeColors('dark-red', 'medium-red', 'light-red');
