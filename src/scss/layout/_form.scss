@@ -232,6 +232,8 @@
       font-size: rem(18);
       color: $color-light;
       font-family: $font-primary;
+      background-color: $color-accenture;
+
       
       .logo {
         width: 25px;
@@ -269,10 +271,11 @@
         color: $color-light;
         width: 181px;
         height: 30px;
-        border-radius: 3px;
+        border-radius: 5px;
         font-size: rem(14);
         display: flex;
         justify-content: center;
+        align-items: center;
         margin-bottom: 30px;
         .fa-twitter{
           margin-right: 9.5px;
@@ -295,6 +298,8 @@
 .inactive{
   background-color: $color-grey-button;
 }
+
+
 }
 
 
