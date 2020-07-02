@@ -16,15 +16,7 @@
             <div class="form__design__style1">
               <label class="style1">
                 <div class="option">
-                  <input
-                    id="style1"
-                    type="radio"
-                    value="green"
-                    name="style"
-                    class="style1"
-                    required
-                    checked
-                  />
+                  <input id="style1" type="radio" value="green" name="style" class="style1" required>
                 </div>
                 <div class="colors">
                   <div class="square one"></div>
@@ -36,14 +28,7 @@
             <div class="form__design__style2">
               <label class="style2">
                 <div class="option">
-                  <input
-                    id="style2"
-                    type="radio"
-                    value="red"
-                    name="style"
-                    class="style2"
-                    required
-                  />
+                  <input id="style2" type="radio" value="red" name="style" class="style2" required />
                 </div>
                 <div class="colors">
                   <div class="square one"></div>
@@ -55,14 +40,7 @@
             <div class="form__design__style3">
               <label class="style3">
                 <div class="option">
-                  <input
-                    id="style3"
-                    type="radio"
-                    value="colorMix"
-                    name="style"
-                    class="style3"
-                    required
-                  />
+                  <input id="style3" type="radio" value="colorMix" name="style" class="style3" required />
                 </div>
                 <div class="colors">
                   <div class="square one"></div>
@@ -85,67 +63,23 @@
             </button>
           </div>
         </h2>
-        <div class="form__section__signup hidden">
+        <div class="form__section__signup">
           <label for="first-name"> Nombre Completo</label>
-          <input
-            class="js-name"
-            placeholder="Ej: Merche Lios"
-            id="first-name"
-            type="text"
-            name="first-name"
-            required
-          />
+          <input class="js-name" ; placeholder="Ej: Merche Lios" id="first-name" type="text" name="first-name"
+            required />
           <label for="puesto">Puesto</label>
-          <input
-            class="js-job"
-            placeholder="Ej:front-end"
-            id="puesto"
-            type="text"
-            name="puesto"
-            required
-          />
+          <input class="js-job" placeholder="Ej:front-end" id="puesto" type="text" name="puesto" required />
           <label for="image"> Imagen de perfil</label>
           <button class="btn-image" href="#">Añadir imagen</button>
-          <input
-            clas="form-img"
-            id="image"
-            type="image"
-            name="image"
-            required
-          />
+          <input clas="form-img" id="image" type="image" name="image" required />
           <label for="email">Email</label>
-          <input
-            class="js-email"
-            placeholder="Ej:merche@gmail.com"
-            id="email"
-            type="email"
-            name="email"
-            required
-          />
+          <input class="js-email" placeholder="Ej:merche@gmail.com" id="email" type="email" name="email" required />
           <label for="phone-number">Teléfono</label>
-          <input
-            class="js-phone"
-            placeholder="Ej:779744561"
-            id="phone-number"
-            type="tel"
-            name="phone-number"
-          />
+          <input class="js-phone" placeholder="Ej:779744561" id="phone-number" type="tel" name="phone-number" />
           <label for="linkedin">Linkedin</label>
-          <input
-            class="js-linkedin"
-            placeholder="Ej:linkedin.com/merche"
-            id="linkedin"
-            type="text"
-            name="linkedin"
-          />
+          <input class="js-linkedin" placeholder="Ej:linkedin.com/merche" id="linkedin" type="text" name="linkedin" />
           <label for="github">Github</label>
-          <input
-            class="js-github github"
-            placeholder="Ej:@merchelios"
-            id="github"
-            type="text"
-            name="github"
-          />
+          <input class="js-github github" placeholder="Ej:@merchelios" id="github" type="text" name="github" />
         </div>
       </section>
       <section class="form__share">
@@ -159,9 +93,14 @@
             </button>
           </div>
         </h2>
-        <div class="form__share__button hidden">
+        <div class="form__share__button active">
           <i class="far fa-address-card"></i>
-          <button href="#">crear tarjeta</button>
+          <button class="js-share share">crear tarjeta</button>
+        </div>
+        <div class="js-twitter twitter hidden">
+          <p class="js-twiter-paragraph twitter-paragraph">La tarjeta ha sido creada:</p>
+          <p class="js-twitter-url twitter-url">https://twitter.com/login</p>
+          <button class="js-twitter-button twitter-button"><i class="fab fa-twitter"></i>Compartir en twitter</button>
         </div>
       </section>
     </form>

@@ -229,10 +229,12 @@
       border-radius: 12px;
       text-align: center;
       padding: 13px 17px;
-      background-color: $color-accenture;
       font-size: rem(18);
       color: $color-light;
       font-family: $font-primary;
+      background-color: $color-accenture;
+
+      
       .logo {
         width: 25px;
         height: 22px;
@@ -240,18 +242,64 @@
         text-align: center;
       }
       button {
-        background-color: $color-accenture;
-        text-transform: uppercase;
-        font-weight: 400;
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+    }
+    .twitter{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid $color-form-medium;
+      border-bottom: 1px solid $color-form-medium;
+      & .twitter-paragraph{
+        font-size: rem(18);
+        color:$color-grey;
+        font-family: $font-primary;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+      & .twitter-url{
+        color:$color-accenture;
+        font-family: $font-primary;
+        font-weight: 600;
+        font-size: rem(12);
+        margin: 5px 0 13px 0;
+      }
+      & .twitter-button{
+        background-color: $color-twitter ;
+        color: $color-light;
+        width: 181px;
+        height: 30px;
+        border-radius: 5px;
+        font-size: rem(14);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        .fa-twitter{
+          margin-right: 9.5px;
+          width: 18px;
+          height: 18px;
+          padding-top: 1px;
+        }
       }
     }
   }
-
   //Display JS arrows//
-  .hidden {
-    display: none;
-  }
+.hidden {
+  display: none;
 }
 
+.active{
+  background-color: $color-accenture;
+}
+
+.inactive{
+  background-color: $color-grey-button;
+}
+
+
+}
 
 
