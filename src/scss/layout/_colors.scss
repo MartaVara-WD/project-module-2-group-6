@@ -18,6 +18,10 @@
   background-color: #7e4444;
 }
 
+.style-red-background-icon {
+  background-color: #7e4444;
+}
+
 /*aplica a const styleYellow*/
 
 .style-yellow-light {
@@ -36,6 +40,10 @@
   background-color: #a0c0cf;
 }
 
+.style-yellow-background-icon {
+  background-color: #a0c0cf;
+}
+
 /*aplica a const styleBlue*/
 
 .style-blue-light {
@@ -50,5 +58,8 @@
   background-color: $color-primary-medium;
 }
 .style-blue-background {
+  background-color: #6dbadd;
+}
+.style-blue-background-icon {
   background-color: #6dbadd;
 }

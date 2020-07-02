@@ -118,6 +118,7 @@ function handlerStyle() {
       'style-red-background'
     );
   }
+  iconColorChange();
 }
 
 styleBlue.addEventListener('click', handlerStyle);
