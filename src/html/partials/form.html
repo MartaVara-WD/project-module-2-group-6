@@ -104,15 +104,29 @@
             name="puesto"
             required
           />
-          <label for="image"> Imagen de perfil</label>
-          <button class="btn-image" href="#">Añadir imagen</button>
-          <input
-            clas="form-img"
-            id="image"
-            type="image"
-            name="image"
-            required
-          />
+          <label for="image">Imagen de perfil</label>
+
+          <div class="envuelve">
+            <div class="action">
+              <button
+                class="btn-img action__upload-btn js__profile-trigger"
+                href="#"
+              >
+                Añadir imagen
+              </button>
+              <input
+                class="action__hiddenField js__profile-upload-btn"
+                id="image"
+                type="file"
+                name="image"
+                required
+              />
+            </div>
+
+            <div class="profile">
+              <div class="profile__preview js__profile-preview"></div>
+            </div>
+          </div>
           <label for="email">Email</label>
           <input
             class="js-email"
