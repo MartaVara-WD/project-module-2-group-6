@@ -1,42 +1,54 @@
 //colores js//
 
 /*aplica a const styleRed*/
-.light-red {
+
+.style-red-light {
   border: 2px solid #e95626;
 }
 
-.dark-red {
+.style-red-dark {
   color: #420101;
 }
 
-.medium-red {
+.style-red-medium {
   background-color: #bd1010;
+}
+
+.style-red-background {
+  background-color: #7e4444;
 }
 
 /*aplica a const styleYellow*/
 
-.light-blue-2 {
+.style-yellow-light {
   border: 2px solid #a0c0cf;
 }
 
-.dark-blue-2 {
+.style-yellow-dark {
   color: #3e5b65;
 }
 
-.medium-yellow {
+.style-yellow-medium {
   background-color: #eab052;
+}
+
+.style-yellow-background {
+  background-color: #a0c0cf;
 }
 
 /*aplica a const styleBlue*/
 
-.light-blue {
+.style-blue-light {
   border: solid 2px $color-primary-light;
 }
 
-.dark-blue {
+.style-blue-dark {
   color: $color-primary-dark;
 }
 
-.medium-blue {
+.style-blue-medium {
   background-color: $color-primary-medium;
+}
+.style-blue-background {
+  background-color: #6dbadd;
 }
