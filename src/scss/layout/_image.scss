@@ -1,18 +1,13 @@
 .envuelve {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   border: 1px solid green;
 }
 .action {
   border: 1px solid deeppink;
-  display: flex;
-  flex-wrap: wrap;
   text-align: center;
   margin: 30px;
 }
 .action__upload-btn {
-  position: absolute;
   width: 140px;
   height: 30px;
   border-radius: 6px;
@@ -30,9 +25,6 @@
 
 .profile {
   border: 1px solid red;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
 }
 .profile__image,
 .profile__preview {
