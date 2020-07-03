@@ -374,3 +374,6 @@ button{
   background-color: inherit;
   padding: 0;
 }
+button:focus {
+  outline: none;
+}
