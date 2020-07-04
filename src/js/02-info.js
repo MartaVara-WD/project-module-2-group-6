@@ -95,6 +95,8 @@ function resetForm() {
   printJob.innerHTML = 'Front-en developer';
   document.querySelector('.js__profile-image').removeAttribute('style');
   document.querySelector('.js__profile-preview').removeAttribute('style');
+  buttonContainer.classList.remove('inactive');
+  buttonTwitter.classList.add('hidden');
 }
 
 resetButton.addEventListener('click', resetForm);
