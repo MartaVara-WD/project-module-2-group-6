@@ -79,3 +79,21 @@ inputGithub.addEventListener('keyup', printUserData);
 //     //quitar fondo
 //   }
 // }
+
+'use strict';
+
+const resetButton = document.querySelector('.js-reset-button');
+const form = document.querySelector('.js-form');
+
+//limpia el formulario(no la tarjeta)
+function resetForm() {
+  console.log('limpia');
+  form.reset();
+  printUserData();
+  changeColors(palette1);
+  printName.innerHTML = 'Nombre Apellido';
+  printJob.innerHTML = 'Front-en developer';
+}
+
+
+resetButton.addEventListener('click', resetForm);
