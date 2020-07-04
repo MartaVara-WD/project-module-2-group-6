@@ -91,10 +91,13 @@ function resetForm() {
   form.reset();
   printUserData();
   changeColors(palette1);
+  //vuelven a escribir la info por defecto de nombre y puesto
   printName.innerHTML = 'Nombre Apellido';
   printJob.innerHTML = 'Front-en developer';
+  //vuelve a la imagen por defecto
   document.querySelector('.js__profile-image').removeAttribute('style');
   document.querySelector('.js__profile-preview').removeAttribute('style');
+  //cierra el botón share y oculta twitter
   buttonContainer.classList.remove('inactive');
   buttonTwitter.classList.add('hidden');
 }
