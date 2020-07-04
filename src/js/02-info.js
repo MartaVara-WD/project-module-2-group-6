@@ -93,7 +93,8 @@ function resetForm() {
   changeColors(palette1);
   printName.innerHTML = 'Nombre Apellido';
   printJob.innerHTML = 'Front-en developer';
+  document.querySelector('.js__profile-image').removeAttribute('style');
+  document.querySelector('.js__profile-preview').removeAttribute('style');
 }
-
 
 resetButton.addEventListener('click', resetForm);
