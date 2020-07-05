@@ -1,13 +1,13 @@
 <section class="form">
   <div class="wrapper">
-    <form class="js-form" action="" method="post">
+    <form class="js-form" action="https://formspree.io/xdowgjrn" method="post">
       <section class="form__design">
         <h2 class="form__design__title">
           <i class="far fa-object-ungroup icon"></i>
           diseña
           <div class="click">
-            <button><i class="arrow-up fas fa-angle-up"></i></button>
-            <button><i class="arrow-down hidden fas fa-angle-down"></i></button>
+            <button><i class="fas fa-moon moonicondown"></i></button>
+            <button><i class="fas fa-moon hidden mooniconup"></i></button>
           </div>
         </h2>
         <div class="colors-container">
@@ -79,9 +79,9 @@
           <i class="far fa-keyboard"></i>
           rellena
           <div class="click2">
-            <button><i class="arrow-up2 fas fa-angle-up"></i></button>
+            <button><i class="fas fa-moon moonicondown2"></i></button>
             <button>
-              <i class="arrow-down2 hidden fas fa-angle-down"></i>
+              <i class="fas fa-moon hidden mooniconup2 "></i>
             </button>
           </div>
         </h2>
@@ -113,7 +113,7 @@
                 id="image"
                 type="file"
                 name="image"
-                required
+                
               />
             </div>
 
@@ -124,7 +124,7 @@
           <label for="email">Email</label>
           <input class="js-email" placeholder="Ej: merche@gmail.com" id="email" type="email" name="email" required />
           <label for="phone-number">Teléfono</label>
-          <input class="js-phone" placeholder="Ej: 779744561" id="phone-number" type="tel" name="phone-number" />
+          <input class="js-phone" placeholder="Ej: 779744561" id="phone-number" type="number" name="phone-number" pattern="[0-9]{9,15}"/>
           <label for="linkedin">Linkedin</label>
           <input class="js-linkedin" placeholder="Ej: @merche" id="linkedin" type="text" name="linkedin" />
           <label for="github">Github</label>
@@ -136,15 +136,15 @@
           <i class="fa fa-share-alt icon"></i>
           comparte
           <div class="click3">
-            <button><i class="arrow-up3 fas fa-angle-up"></i></button>
+            <button><i class="fas fa-moon moonicondown3"></i></button>
             <button>
-              <i class="arrow-down3 hidden fas fa-angle-down"></i>
+              <i class="fas fa-moon hidden mooniconup3 "></i>
             </button>
           </div>
         </h2>
         <div class="form__share__button active">
           <i class="far fa-address-card"></i>
-          <button class="js-share share">crear tarjeta</button>
+          <button type="submit" value="Enviar" class="js-share share">crear tarjeta</button>
         </div>
         <div class="js-twitter twitter hidden">
           <p class="js-twiter-paragraph twitter-paragraph">La tarjeta ha sido creada:</p>

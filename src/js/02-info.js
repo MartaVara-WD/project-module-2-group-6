@@ -26,6 +26,7 @@ function saveFormValues () {
   userData.email = inputEmail.value;
   userData.linkedin = inputLinkedin.value;
   userData.github = inputGithub.value;
+  
 }
 
 //envía los datos a la tarjeta
@@ -50,37 +51,6 @@ inputPhone.addEventListener('keyup', printUserData);
 inputEmail.addEventListener('keyup', printUserData);
 inputLinkedin.addEventListener('keyup', printUserData);
 inputGithub.addEventListener('keyup', printUserData);
-
-// function x() {
-//   let css = '.fondo';
-//   if (azul.checked) {
-//     css = '.azul';
-//   }
-//   if (verde.checked) {
-//     css = '.verde';
-//   }
-//   if (rojo.checked) {
-//     css = '.rojo';
-//   }
-
-//   if (usedata.email != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-//   if (usedata.github != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-//   if (usedata.patata != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-// }
-
-'use strict';
 
 const resetButton = document.querySelector('.js-reset-button');
 const form = document.querySelector('.js-form');

@@ -33,6 +33,43 @@
         height: 18px;
         color: $color-accenture;
       }
+      .moonicondown{
+        color: $color-medium-yellow;
+        transform:rotate(110deg);
+      
+       &:hover {
+         animation: rotate;
+         animation-duration: 1.5s;
+         animation-iteration-count: 1;
+         animation-timing-function: linear;
+        }
+        @keyframes rotate {
+         from {
+           transform: rotate(110deg);
+          }
+         to{
+           transform: rotate(460deg);
+         }
+        } 
+      }
+      .mooniconup{
+        color: $color-medium-yellow;
+        transform:rotate(-70deg);
+        &:hover {
+          animation: rotation;
+          animation-duration: 1.5s;
+          animation-iteration-count: 1;
+          animation-timing-function: linear;
+         }
+         @keyframes rotation {
+           from {
+            transform: rotate(-70deg);
+           }
+           to{
+            transform: rotate(300deg);
+          }
+        } 
+      }
     }
     .colors-container {
       margin-top: 22px;
@@ -124,7 +161,7 @@
           background-color: #3e5b65;
         }
         .two {
-          background-color: #eab052;
+          background-color: $color-medium-yellow;
         }
         .three {
           background-color: #a0c0cf;
@@ -154,7 +191,44 @@
         color: $color-accenture;
       }
     }
-
+    .moonicondown2{
+      color: $color-medium-yellow;
+      transform:rotate(110deg);
+    
+     &:hover {
+       animation: rotate;
+       animation-duration: 1.5s;
+       animation-iteration-count: 1;
+       animation-timing-function: linear;
+      }
+      @keyframes rotate {
+       from {
+         transform: rotate(110deg);
+        }
+       to{
+         transform: rotate(460deg);
+       }
+      } 
+    }
+    .mooniconup2{
+      color: $color-medium-yellow;
+      transform:rotate(-70deg);
+      &:hover {
+        animation: rotation;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+       }
+       @keyframes rotation {
+        from {
+          transform: rotate(-70deg);
+         }
+        to{
+          transform: rotate(300deg);
+        }
+      }
+    }
+    
     &__signup {
       flex-direction: row;
       justify-content: flex-start;
@@ -183,6 +257,9 @@
         font-family: $font-primary;
         font-size: 14px;
         color: $color-light-dark;
+        &:invalid{
+          border:red 1px solid;
+        }
       }
 
       .btn-image {
@@ -229,6 +306,44 @@
         height: 18px;
         color: $color-accenture;
       }
+    }
+    .moonicondown3{
+      color: $color-medium-yellow;
+      transform:rotate(110deg);
+    
+     &:hover {
+       animation: rotate;
+       animation-duration: 1.5s;
+       animation-iteration-count: 1;
+       animation-timing-function: linear;
+      }
+      @keyframes rotate {
+       from {
+         transform: rotate(110deg);
+        }
+       to{
+         transform: rotate(460deg);
+       }
+      } 
+    }
+    .mooniconup3{
+      color: $color-medium-yellow;
+      transform:rotate(-70deg);
+      &:hover {
+        animation: rotation;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+       }
+       @keyframes rotation {
+        from {
+          transform: rotate(-70deg);
+         }
+        to{
+          transform: rotate(300deg);
+        }
+      } 
+     
     }
     &__button {
       margin: 60px auto;

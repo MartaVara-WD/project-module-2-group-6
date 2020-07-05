@@ -1,8 +1,9 @@
 'use strict';
+
 const click = document.querySelector('.click');
 const section = document.querySelector('.colors-container');
-const arrowDown = document.querySelector('.arrow-down');
-const arrowUp = document.querySelector('.arrow-up');
+const arrowDown = document.querySelector('.moonicondown');
+const arrowUp = document.querySelector('.mooniconup');
 
 function displayArrow() {
   section.classList.toggle('hidden');
@@ -12,11 +13,10 @@ function displayArrow() {
 
 click.addEventListener ('click', displayArrow);
 
-'use strict';
 const click2 = document.querySelector('.click2');
 const section2 = document.querySelector('.form__section__signup');
-const arrowDown2 = document.querySelector('.arrow-down2');
-const arrowUp2 = document.querySelector('.arrow-up2');
+const arrowDown2 = document.querySelector('.moonicondown2');
+const arrowUp2 = document.querySelector('.mooniconup2');
 
 function displayArrow2() {
   section2.classList.toggle('hidden');
@@ -29,8 +29,8 @@ click2.addEventListener ('click', displayArrow2);
 // share
 const click3 = document.querySelector('.click3');
 const section3 = document.querySelector('.form__share__button');
-const arrowDown3 = document.querySelector('.arrow-down3');
-const arrowUp3 = document.querySelector('.arrow-up3');
+const arrowDown3 = document.querySelector('.moonicondown3');
+const arrowUp3 = document.querySelector('.mooniconup3');
 
 function displayArrow3() {
   section3.classList.toggle('hidden');
