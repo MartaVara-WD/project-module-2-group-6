@@ -8,10 +8,11 @@ function createCard (ev) {
   let form = document.querySelector('form');
 
  if (form.checkValidity()){
+   ev.preventDefault ();
    buttonContainer.classList.remove ('active');
    buttonContainer.classList.add ('inactive');
    buttonTwitter.classList.remove ('hidden');
-   ev.preventDefault ();
+   
   }
 }
 
