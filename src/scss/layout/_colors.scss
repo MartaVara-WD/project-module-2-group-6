@@ -16,10 +16,16 @@
 
 .style-red-background {
   background-color: #7e4444;
+  background: {
+    image: url(../images/verderosa.svg);
+    repeat: no-repeat;
+    height: 100%;
+    position: center;
+  }
 }
 
 .style-red-background-icon {
-  background-color: #7e4444;
+  background-color: #e95626;
 }
 
 /*aplica a const styleYellow*/
@@ -38,6 +44,12 @@
 
 .style-yellow-background {
   background-color: #a0c0cf;
+  background: {
+    image: url(../images/azul.svg);
+    repeat: no-repeat;
+    height: 100%;
+    position: center;
+  }
 }
 
 .style-yellow-background-icon {
@@ -58,8 +70,8 @@
   background-color: $color-primary-medium;
 }
 .style-blue-background {
-  background-color:  rgb(119, 184, 201);
+  background-color: rgb(119, 184, 201);
 }
 .style-blue-background-icon {
-  background-color: #6dbadd;
+  background-color: $color-primary-light;
 }
