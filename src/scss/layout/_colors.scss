@@ -71,6 +71,12 @@
 }
 .style-blue-background {
   background-color: rgb(119, 184, 201);
+  background: {
+    image: url(../images/moon.svg);
+    repeat: no-repeat;
+    height: 100%;
+    position: center;
+  }
 }
 .style-blue-background-icon {
   background-color: $color-primary-light;
