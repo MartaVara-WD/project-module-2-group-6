@@ -1,17 +1,17 @@
 'use strict';
 
-const inputName = document.querySelector ('.js-name');
-const inputJob = document.querySelector ('.js-job');
-const inputPhone = document.querySelector ('.js-phone');
-const inputEmail = document.querySelector ('.js-email');
-const inputLinkedin = document.querySelector ('.js-linkedin');
-const inputGithub = document.querySelector ('.js-github');
-const printPhone = document.querySelector ('.js-phone-icon');
-const printName = document.querySelector ('.card__top__title__name');
-const printJob = document.querySelector ('.card__top__title__role');
-const printEmail = document.querySelector ('.js-email-icon');
-const printLinkedin = document.querySelector ('.js-linkedin-print');
-const printGithub = document.querySelector ('.js-github-print');
+const inputName = document.querySelector('.js-name');
+const inputJob = document.querySelector('.js-job');
+const inputPhone = document.querySelector('.js-phone');
+const inputEmail = document.querySelector('.js-email');
+const inputLinkedin = document.querySelector('.js-linkedin');
+const inputGithub = document.querySelector('.js-github');
+const printPhone = document.querySelector('.js-phone-icon');
+const printName = document.querySelector('.card__top__title__name');
+const printJob = document.querySelector('.card__top__title__role');
+const printEmail = document.querySelector('.js-email-icon');
+const printLinkedin = document.querySelector('.js-linkedin-print');
+const printGithub = document.querySelector('.js-github-print');
 
 //empty object
 
@@ -19,7 +19,7 @@ const userData = {};
 
 //función que guarda los datos
 
-function saveFormValues () {
+function saveFormValues() {
   userData.name = inputName.value;
   userData.job = inputJob.value;
   userData.phone = inputPhone.value;
@@ -29,7 +29,7 @@ function saveFormValues () {
 }
 
 //envía los datos a la tarjeta
-function sendUserData () {
+function sendUserData() {
   printName.innerHTML = userData.name;
   printJob.innerHTML = userData.job;
   printPhone.href = `tel:` + userData.phone;
@@ -39,9 +39,9 @@ function sendUserData () {
 }
 
 // esta hace magia y lo cambia en la tarjeta
-function printUserData () {
-  saveFormValues ();
-  sendUserData ();
+function printUserData() {
+  saveFormValues();
+  sendUserData();
 }
 
 inputName.addEventListener('keyup', printUserData);
@@ -51,46 +51,20 @@ inputEmail.addEventListener('keyup', printUserData);
 inputLinkedin.addEventListener('keyup', printUserData);
 inputGithub.addEventListener('keyup', printUserData);
 
-// function x() {
-//   let css = '.fondo';
-//   if (azul.checked) {
-//     css = '.azul';
-//   }
-//   if (verde.checked) {
-//     css = '.verde';
-//   }
-//   if (rojo.checked) {
-//     css = '.rojo';
-//   }
-
-//   if (usedata.email != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-//   if (usedata.github != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-//   if (usedata.patata != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-// }
-
-'use strict';
+('use strict');
 
 const resetButton = document.querySelector('.js-reset-button');
 const form = document.querySelector('.js-form');
 
 //limpia el formulario(no la tarjeta)
 function resetForm() {
-  console.log('limpia');
   form.reset();
+
+  // función que imprime la info en la tarjeta
   printUserData();
   changeColors(palette1);
+  removeColors(palette2);
+  removeColors(palette3);
   //vuelven a escribir la info por defecto de nombre y puesto
   printName.innerHTML = 'Nombre Apellido';
   printJob.innerHTML = 'Front-en developer';
@@ -100,6 +74,11 @@ function resetForm() {
   //cierra el botón share y oculta twitter
   buttonContainer.classList.remove('inactive');
   buttonTwitter.classList.add('hidden');
+
+  //funciones que borran los styles de los fondos
+  iconChangeBlue();
+  iconChangeRed();
+  iconChangeYellow();
 }
 
 resetButton.addEventListener('click', resetForm);
