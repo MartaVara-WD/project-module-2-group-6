@@ -44,12 +44,21 @@ function printUserData () {
   sendUserData ();
 }
 
+<<<<<<< HEAD:src/js/03-info.js
 inputName.addEventListener ('keyup', printUserData);
 inputJob.addEventListener ('keyup', printUserData);
 inputPhone.addEventListener ('keyup', printUserData);
 inputEmail.addEventListener ('keyup', printUserData);
 inputLinkedin.addEventListener ('keyup', printUserData);
 inputGithub.addEventListener ('keyup', printUserData);
+=======
+inputName.addEventListener('keyup', printUserData);
+inputJob.addEventListener('keyup', printUserData);
+inputPhone.addEventListener('keyup', printUserData);
+inputEmail.addEventListener('keyup', printUserData);
+inputLinkedin.addEventListener('keyup', printUserData);
+inputGithub.addEventListener('keyup', printUserData);
+>>>>>>> 5f3c870f6f2f9d256d254bb143bb79a8e19f8c37:src/js/02-info.js
 
 // function x() {
 //   let css = '.fondo';
@@ -79,3 +88,30 @@ inputGithub.addEventListener ('keyup', printUserData);
 //     //quitar fondo
 //   }
 // }
+<<<<<<< HEAD:src/js/03-info.js
+=======
+
+'use strict';
+
+const resetButton = document.querySelector('.js-reset-button');
+const form = document.querySelector('.js-form');
+
+//limpia el formulario(no la tarjeta)
+function resetForm() {
+  console.log('limpia');
+  form.reset();
+  printUserData();
+  changeColors(palette1);
+  //vuelven a escribir la info por defecto de nombre y puesto
+  printName.innerHTML = 'Nombre Apellido';
+  printJob.innerHTML = 'Front-en developer';
+  //vuelve a la imagen por defecto
+  document.querySelector('.js__profile-image').removeAttribute('style');
+  document.querySelector('.js__profile-preview').removeAttribute('style');
+  //cierra el botón share y oculta twitter
+  buttonContainer.classList.remove('inactive');
+  buttonTwitter.classList.add('hidden');
+}
+
+resetButton.addEventListener('click', resetForm);
+>>>>>>> 5f3c870f6f2f9d256d254bb143bb79a8e19f8c37:src/js/02-info.js

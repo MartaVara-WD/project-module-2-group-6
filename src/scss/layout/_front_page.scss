@@ -1,13 +1,18 @@
+.main {
+  min-height: 88vh;
+}
+
 .front {
   background-color: $color-tertiary-light;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 60vh;
+  min-height: 660px;
 
   @include tablet {
-    height: 963px;
+    min-height: 400px;
   }
+  
 
   &__text {
     text-align: center;
