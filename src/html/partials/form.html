@@ -16,15 +16,7 @@
             <div class="form__design__style1">
               <label class="style-blue">
                 <div class="option">
-                  <input
-                    id="style1"
-                    type="radio"
-                    value="green"
-                    name="style"
-                    class="js-input-blue"
-                    required
-                    checked
-                  />
+                  <input id="style1" type="radio" value="green" name="style" class="js-input-blue" required checked />
                 </div>
                 <div class="colors">
                   <div class="square one"></div>
@@ -36,14 +28,7 @@
             <div class="form__design__style2">
               <label class="style-red">
                 <div class="option">
-                  <input
-                    id="style2"
-                    type="radio"
-                    value="red"
-                    name="style"
-                    class="js-input-red"
-                    required
-                  />
+                  <input id="style2" type="radio" value="red" name="style" class="js-input-red" required />
                 </div>
                 <div class="colors">
                   <div class="square one"></div>
@@ -55,14 +40,7 @@
             <div class="form__design__style3">
               <label class="style-yellow">
                 <div class="option">
-                  <input
-                    id="style3"
-                    type="radio"
-                    value="colorMix"
-                    name="style"
-                    class="js-input-yellow"
-                    required
-                  />
+                  <input id="style3" type="radio" value="colorMix" name="style" class="js-input-yellow" required />
                 </div>
                 <div class="colors">
                   <div class="square one"></div>
@@ -88,33 +66,18 @@
         <div class="form__section__signup">
           <label for="first-name"> Nombre Completo</label>
           <input class="js-name" ; placeholder="Ej: Merche Lios" id="first-name" type="text" name="first-name"
-            required />
+            maxlength="19" required />
           <label for="puesto">Puesto</label>
-          <input
-            class="js-job"
-            placeholder="Ej: Front-end"
-            id="puesto"
-            type="text"
-            name="puesto"
-            required
-          />
+          <input class="js-job" placeholder="Ej: Front-end" id="puesto" type="text" name="puesto" maxlength="19"
+            required />
           <label for="image">Imagen de perfil</label>
 
-          <div class="envuelve">
+          <div class="image-wrapper">
             <div class="action">
-              <button
-                class="btn-img action__upload-btn js__profile-trigger"
-                href="#"
-              >
+              <button class="btn-img action__upload-btn js__profile-trigger" href="#">
                 Añadir imagen
               </button>
-              <input
-                class="action__hiddenField js__profile-upload-btn"
-                id="image"
-                type="file"
-                name="image"
-                required
-              />
+              <input class="action__hiddenField js__profile-upload-btn" id="image" type="file" />
             </div>
 
             <div class="profile">
@@ -148,7 +111,7 @@
         </div>
         <div class="js-twitter twitter hidden">
           <p class="js-twiter-paragraph twitter-paragraph">La tarjeta ha sido creada:</p>
-          <p class="js-twitter-url twitter-url">https://twitter.com/login</p>
+          <p class="js-twitter-url twitter-url response">https://twitter.com/login</p>
           <button class="js-twitter-button twitter-button"><i class="fab fa-twitter"></i>Compartir en twitter</button>
         </div>
       </section>
