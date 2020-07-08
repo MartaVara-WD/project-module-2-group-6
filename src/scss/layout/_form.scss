@@ -258,6 +258,9 @@
         font-family: $font-primary;
         font-size: 14px;
         color: $color-light-dark;
+        &:invalid{
+          border:red 1px solid;
+        }
       }
 
       .btn-image {
