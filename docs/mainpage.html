@@ -53,7 +53,7 @@
           <div class="card__photo js-background js__profile-image"></div>
           <div class="card__bottom">
             <ul class="card__bottom__list">
-              <li class="card__bottom__list__li js-border js-background-mobile">
+              <li class="card__bottom__list__li js-border js-background-phone">
                 <a href="" target="_blank" class="js-phone-icon">
                   <i class="js-icon icon fas fa-mobile-alt"></i>
                 </a>
@@ -172,8 +172,16 @@
             </h2>
             <div class="form__section__signup">
               <label for="first-name"> Nombre Completo</label>
-              <input class="js-name" ; placeholder="Ej: Merche Lios" id="first-name" type="text" name="first-name"
-                required />
+              <input
+                class="js-name"
+                ;
+                placeholder="Ej: Merche Lios"
+                id="first-name"
+                type="text"
+                name="first-name"
+                maxlength="19"
+                required
+              />
               <label for="puesto">Puesto</label>
               <input
                 class="js-job"
@@ -181,11 +189,12 @@
                 id="puesto"
                 type="text"
                 name="puesto"
+                maxlength="19"
                 required
               />
               <label for="image">Imagen de perfil</label>
 
-              <div class="envuelve">
+              <div class="image-wrapper">
                 <div class="action">
                   <button
                     class="btn-img action__upload-btn js__profile-trigger"
@@ -197,8 +206,6 @@
                     class="action__hiddenField js__profile-upload-btn"
                     id="image"
                     type="file"
-                    name="image"
-                    required
                   />
                 </div>
 
@@ -207,13 +214,38 @@
                 </div>
               </div>
               <label for="email">Email</label>
-              <input class="js-email" placeholder="Ej: merche@gmail.com" id="email" type="email" name="email" required />
+              <input
+                class="js-email"
+                placeholder="Ej: merche@gmail.com"
+                id="email"
+                type="email"
+                name="email"
+                required
+              />
               <label for="phone-number">Teléfono</label>
-              <input class="js-phone" placeholder="Ej: 779744561" id="phone-number" type="tel" name="phone-number" />
+              <input
+                class="js-phone"
+                placeholder="Ej: 779744561"
+                id="phone-number"
+                type="tel"
+                name="phone-number"
+              />
               <label for="linkedin">Linkedin</label>
-              <input class="js-linkedin" placeholder="Ej: @merche" id="linkedin" type="text" name="linkedin" />
+              <input
+                class="js-linkedin"
+                placeholder="Ej: @merche"
+                id="linkedin"
+                type="text"
+                name="linkedin"
+              />
               <label for="github">Github</label>
-              <input class="js-github github" placeholder="Ej: @merchelios" id="github" type="text" name="github" />
+              <input
+                class="js-github github"
+                placeholder="Ej: @merchelios"
+                id="github"
+                type="text"
+                name="github"
+              />
             </div>
           </section>
           <section class="form__share">
@@ -232,14 +264,29 @@
               <button class="js-share share">crear tarjeta</button>
             </div>
             <div class="js-twitter twitter hidden">
-              <p class="js-twiter-paragraph twitter-paragraph">La tarjeta ha sido creada:</p>
-              <p class="js-twitter-url twitter-url">https://twitter.com/login</p>
-              <button class="js-twitter-button twitter-button"><i class="fab fa-twitter"></i>Compartir en twitter</button>
+              <p class="js-twiter-paragraph twitter-paragraph">
+                ✨ Aquí tienes tu tarjeta de visita Sailor Code ✨
+              </p>
+              <p class="js-twitter-url twitter-url response">
+                https://twitter.com/login
+              </p>
+              <a
+                class="twitter-share-button"
+                href="https://twitter.com/intent/tweet"
+              >
+                <button class="js-twitter-button twitter-button">
+                  <a class="twitter-link">
+                    <i class="fab fa-twitter"></i>
+                    Compartir en twitter
+                  </a>
+                </button>
+              </a>
             </div>
           </section>
         </form>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
