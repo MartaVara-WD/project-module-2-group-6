@@ -123,7 +123,7 @@ function saveFormValues() {
   userData.linkedin = inputLinkedin.value;
   userData.github = inputGithub.value;
   userData.palette = number;
-  userData.photo = fr.result;
+  userData.photo = photoForm;
   localStorage.setItem('userData', JSON.stringify(userData));
 }
 
@@ -145,20 +145,28 @@ function printUserData() {
   sendUserData();
   
 }
-function storageData (){
+function storageData() {
   let recoverData = JSON.parse(localStorage.getItem('userData'));
-  console.log(recoverData);
-  debugger;
-  //if( recoverData !== 0){    
-   printName.innerHTML = recoverData.name;
-   printJob.innerHTML =  recoverData.job;
-   printPhone.href = `tel:` + recoverData.phone;
-   printEmail.href = `mailto:` + recoverData.email;
-   printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
-   printGithub.href = `https://github.com/` + recoverData.github;   
-  //}
+  if( recoverData !== 0){
+    printName.innerHTML = recoverData.name;
+    printJob.innerHTML =  recoverData.job;
+    printPhone.href = `tel:` + recoverData.phone;
+    printEmail.href = `mailto:` + recoverData.email;
+    printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
+    printGithub.href = `https://github.com/` + recoverData.github;
+    inputName.value = recoverData.name;
+    inputJob.value = recoverData.job;
+    inputPhone.value = recoverData.phone;
+    inputEmail.value = recoverData.email;
+    inputLinkedin.value = recoverData.linkedin;
+    inputGithub.value = recoverData.github;
+    number = recoverData.palette;
+    photoForm = recoverData.photo;
+    saveFormValues();
+  }
 }
-document.addEventListener('load', storageData);
+
+document.addEventListener('DOMContentLoaded', storageData);
 inputName.addEventListener ('keyup', printUserData);
 inputJob.addEventListener ('keyup', printUserData);
 inputPhone.addEventListener ('keyup', printUserData);

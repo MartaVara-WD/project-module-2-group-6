@@ -51,9 +51,8 @@ buttonCard.addEventListener('click', function (event) {
     .catch(function (error) {
       console.log(error);
     });
-    form.reset();
-
 });
+
 function showURL(result) {
   console.log(result);
   if (result.success) {
