@@ -358,7 +358,13 @@
       color: $color-light;
       font-family: $font-primary;
       background-color: $color-accenture;
-
+      &:active {
+        transform: translateY(4px);
+      }
+      &:hover {
+        background-color: $color-medium-yellow;
+        //cursor: pointer;
+      }
       
       .logo {
         width: 25px;
@@ -378,13 +384,16 @@
       border-top: 1px solid $color-form-medium;
       border-bottom: 1px solid $color-form-medium;
       & .twitter-paragraph{
+        margin-top: 15px;
+        text-align: center;
         font-size: rem(18);
-        color:$color-grey;
+        color: $color-grey;
         font-family: $font-primary;
         font-weight: 600;
         margin-top: 20px;
       }
       & .twitter-url{
+        text-align: center;
         color:$color-accenture;
         font-family: $font-primary;
         font-weight: 600;
@@ -402,6 +411,10 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
+        &:hover {
+          background-color: $color-accenture;
+          //cursor: pointer;
+        }
         .fa-twitter{
           margin-right: 9.5px;
           width: 18px;
