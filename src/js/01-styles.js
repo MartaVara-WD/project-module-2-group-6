@@ -16,11 +16,33 @@ const colorIcons = document.querySelectorAll('.js-icon');
 const colorBorder = document.querySelectorAll('.js-border');
 
 //paletas de colores
-const palette1 = ['style-blue-dark', 'style-blue-medium', 'style-blue-light','style-blue-background', 'style-blue-background-icon'];
-const palette2 = ['style-red-dark', 'style-red-medium', 'style-red-light', 'style-red-background', 'style-red-background-icon'];
-const palette3 = ['style-yellow-dark', 'style-yellow-medium', 'style-yellow-light', 'style-yellow-background', 'style-yellow-background-icon'];
+const palette1 = [
+  'style-blue-dark',
+  'style-blue-medium',
+  'style-blue-light',
+  'style-blue-background',
+  'style-blue-background-icon',
+];
+const palette2 = [
+  'style-red-dark',
+  'style-red-medium',
+  'style-red-light',
+  'style-red-background',
+  'style-red-background-icon',
+];
+const palette3 = [
+  'style-yellow-dark',
+  'style-yellow-medium',
+  'style-yellow-light',
+  'style-yellow-background',
+  'style-yellow-background-icon',
+];
 
 function handlerStyle() {
+  iconChangeBlue();
+  iconChangeRed();
+  iconChangeYellow();
+
   //Muestra cuál es el evento actual//
   if (event.currentTarget.classList.value === 'style-blue') {
     changeColors(palette1);
@@ -63,7 +85,6 @@ function removeColors(palette) {
 }
 
 //iconColorChange();
-
 
 styleBlue.addEventListener('click', handlerStyle);
 styleRed.addEventListener('click', handlerStyle);
