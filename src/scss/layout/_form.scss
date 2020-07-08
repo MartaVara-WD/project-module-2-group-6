@@ -33,43 +33,6 @@
         height: 18px;
         color: $color-accenture;
       }
-      .moonicondown{
-        color: $color-medium-yellow;
-        transform:rotate(110deg);
-      
-       &:hover {
-         animation: rotate;
-         animation-duration: 1.5s;
-         animation-iteration-count: 1;
-         animation-timing-function: linear;
-        }
-        @keyframes rotate {
-         from {
-           transform: rotate(110deg);
-          }
-         to{
-           transform: rotate(460deg);
-         }
-        } 
-      }
-      .mooniconup{
-        color: $color-medium-yellow;
-        transform:rotate(-70deg);
-        &:hover {
-          animation: rotation;
-          animation-duration: 1.5s;
-          animation-iteration-count: 1;
-          animation-timing-function: linear;
-         }
-         @keyframes rotation {
-           from {
-            transform: rotate(-70deg);
-           }
-           to{
-            transform: rotate(300deg);
-          }
-        } 
-      }
     }
     .colors-container {
       margin-top: 22px;
@@ -161,7 +124,7 @@
           background-color: #3e5b65;
         }
         .two {
-          background-color: $color-medium-yellow;
+          background-color: #eab052;
         }
         .three {
           background-color: #a0c0cf;
@@ -191,44 +154,7 @@
         color: $color-accenture;
       }
     }
-    .moonicondown2{
-      color: $color-medium-yellow;
-      transform:rotate(110deg);
-    
-     &:hover {
-       animation: rotate;
-       animation-duration: 1.5s;
-       animation-iteration-count: 1;
-       animation-timing-function: linear;
-      }
-      @keyframes rotate {
-       from {
-         transform: rotate(110deg);
-        }
-       to{
-         transform: rotate(460deg);
-       }
-      } 
-    }
-    .mooniconup2{
-      color: $color-medium-yellow;
-      transform:rotate(-70deg);
-      &:hover {
-        animation: rotation;
-        animation-duration: 1.5s;
-        animation-iteration-count: 1;
-        animation-timing-function: linear;
-       }
-       @keyframes rotation {
-        from {
-          transform: rotate(-70deg);
-         }
-        to{
-          transform: rotate(300deg);
-        }
-      }
-    }
-    
+
     &__signup {
       flex-direction: row;
       justify-content: flex-start;
@@ -259,9 +185,6 @@
         font-family: $font-primary;
         font-size: 14px;
         color: $color-light-dark;
-        &:invalid{
-          border:red 1px solid;
-        }
       }
 
       .btn-image {
@@ -309,44 +232,6 @@
         color: $color-accenture;
       }
     }
-    .moonicondown3{
-      color: $color-medium-yellow;
-      transform:rotate(110deg);
-    
-     &:hover {
-       animation: rotate;
-       animation-duration: 1.5s;
-       animation-iteration-count: 1;
-       animation-timing-function: linear;
-      }
-      @keyframes rotate {
-       from {
-         transform: rotate(110deg);
-        }
-       to{
-         transform: rotate(460deg);
-       }
-      } 
-    }
-    .mooniconup3{
-      color: $color-medium-yellow;
-      transform:rotate(-70deg);
-      &:hover {
-        animation: rotation;
-        animation-duration: 1.5s;
-        animation-iteration-count: 1;
-        animation-timing-function: linear;
-       }
-       @keyframes rotation {
-        from {
-          transform: rotate(-70deg);
-         }
-        to{
-          transform: rotate(300deg);
-        }
-      } 
-     
-    }
     &__button {
       margin: 60px auto;
       width: 199px;
@@ -359,7 +244,6 @@
       font-family: $font-primary;
       background-color: $color-accenture;
 
-      
       .logo {
         width: 25px;
         height: 22px;
@@ -367,32 +251,35 @@
         text-align: center;
       }
       button {
-      text-transform: uppercase;
-      font-weight: 400;
+        text-transform: uppercase;
+        font-weight: 400;
       }
     }
-    .twitter{
+    .twitter {
       display: flex;
       flex-direction: column;
       align-items: center;
       border-top: 1px solid $color-form-medium;
       border-bottom: 1px solid $color-form-medium;
-      & .twitter-paragraph{
+      & .twitter-paragraph {
+        margin-top: 15px;
+        text-align: center;
         font-size: rem(18);
-        color:$color-grey;
+        color: $color-grey;
         font-family: $font-primary;
         font-weight: 600;
         margin-top: 20px;
       }
-      & .twitter-url{
-        color:$color-accenture;
+      & .twitter-url {
+        text-align: center;
+        color: $color-accenture;
         font-family: $font-primary;
         font-weight: 600;
         font-size: rem(12);
         margin: 5px 0 13px 0;
       }
-      & .twitter-button{
-        background-color: $color-twitter ;
+      & .twitter-button {
+        background-color: $color-twitter;
         color: $color-light;
         width: 181px;
         height: 30px;
@@ -402,7 +289,7 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
-        .fa-twitter{
+        .fa-twitter {
           margin-right: 9.5px;
           width: 18px;
           height: 18px;
@@ -412,19 +299,15 @@
     }
   }
   //Display JS arrows//
-.hidden {
-  display: none;
+  .hidden {
+    display: none;
+  }
+
+  .active {
+    background-color: $color-accenture;
+  }
+
+  .inactive {
+    background-color: $color-grey-button;
+  }
 }
-
-.active{
-  background-color: $color-accenture;
-}
-
-.inactive{
-  background-color: $color-grey-button;
-}
-
-
-}
-
-
