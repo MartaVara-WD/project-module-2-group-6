@@ -146,17 +146,17 @@ function printUserData() {
   
 }
 function storageData (){
-  let recoverData= JSON.parse(localStorage.getItem('userData'));
+  let recoverData = JSON.parse(localStorage.getItem('userData'));
   console.log(recoverData);
   debugger;
-  if( recoverData !== 0){    
+  //if( recoverData !== 0){    
    printName.innerHTML = recoverData.name;
    printJob.innerHTML =  recoverData.job;
    printPhone.href = `tel:` + recoverData.phone;
    printEmail.href = `mailto:` + recoverData.email;
    printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
    printGithub.href = `https://github.com/` + recoverData.github;   
-  }
+  //}
 }
 document.addEventListener('load', storageData);
 inputName.addEventListener ('keyup', printUserData);
