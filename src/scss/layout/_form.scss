@@ -277,6 +277,9 @@
         margin: 5px 0 13px 0;
       }
       & .twitter-button {
+        &:hover {
+          background-color: $color-accenture;
+        }
         background-color: $color-twitter;
         color: $color-light;
         width: 181px;

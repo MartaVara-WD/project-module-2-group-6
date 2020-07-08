@@ -55,7 +55,7 @@ buttonCard.addEventListener('click', function (event) {
 function showURL(result) {
   console.log(result);
   if (result.success) {
-    const tweet = 'Echa un vistazo a mi tarjeta de visita Sailor Code ✨ ';
+    const tweet = '✨Echa un vistazo a mi tarjeta de visita Sailor Code ✨ ';
 
     url.innerHTML = `${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
 
