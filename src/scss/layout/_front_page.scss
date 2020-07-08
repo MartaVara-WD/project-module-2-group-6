@@ -12,7 +12,6 @@
   @include tablet {
     min-height: 400px;
   }
-  
 
   &__text {
     text-align: center;
@@ -81,7 +80,7 @@
     transition: background-color ease-in 0.5s;
 
     &:hover {
-      animation: pulse 1s;
+      animation: pulse 0.5s;
       animation-iteration-count: infinite;
       background-color: $color-accenture;
     }
