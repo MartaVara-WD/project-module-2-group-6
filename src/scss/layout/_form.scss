@@ -33,43 +33,43 @@
         height: 18px;
         color: $color-accenture;
       }
-      .moonicondown{
-        color: $color-medium-yellow;
-        transform:rotate(110deg);
-      
-       &:hover {
-         animation: rotate;
-         animation-duration: 1.5s;
-         animation-iteration-count: 1;
-         animation-timing-function: linear;
+    }
+    .moonicondown{
+      color: $color-medium-yellow;
+      transform:rotate(110deg);
+    
+     &:hover {
+       animation: rotate;
+       animation-duration: 1.5s;
+       animation-iteration-count: 1;
+       animation-timing-function: linear;
+      }
+      @keyframes rotate {
+       from {
+         transform: rotate(110deg);
         }
-        @keyframes rotate {
+       to{
+         transform: rotate(460deg);
+       }
+      } 
+    }
+    .mooniconup{
+      color: $color-medium-yellow;
+      transform:rotate(-70deg);
+      &:hover {
+        animation: rotation;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+       }
+       @keyframes rotation {
          from {
-           transform: rotate(110deg);
-          }
+          transform: rotate(-70deg);
+         }
          to{
-           transform: rotate(460deg);
-         }
-        } 
-      }
-      .mooniconup{
-        color: $color-medium-yellow;
-        transform:rotate(-70deg);
-        &:hover {
-          animation: rotation;
-          animation-duration: 1.5s;
-          animation-iteration-count: 1;
-          animation-timing-function: linear;
-         }
-         @keyframes rotation {
-           from {
-            transform: rotate(-70deg);
-           }
-           to{
-            transform: rotate(300deg);
-          }
-        } 
-      }
+          transform: rotate(300deg);
+        }
+      } 
     }
     .colors-container {
       margin-top: 22px;
@@ -243,9 +243,7 @@
         font-family: $font-primary;
         color: $color-primary-dark;
       }
-      .asterisk{
-        color: $color-accenture; 
-      }
+
       input {
         margin-top: 7px;
         margin-bottom: 10px;
@@ -392,6 +390,9 @@
         margin: 5px 0 13px 0;
       }
       & .twitter-button {
+        &:hover {
+          background-color: $color-accenture;
+        }
         background-color: $color-twitter;
         color: $color-light;
         width: 181px;
