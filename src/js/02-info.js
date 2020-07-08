@@ -124,7 +124,10 @@ function saveFormValues() {
   userData.github = inputGithub.value;
   userData.palette = number;
   userData.photo = fr.result;
+  localStorage.setItem('userData', JSON.stringify(userData));
 }
+
+
 
 //envía los datos a la tarjeta
 function sendUserData() {
@@ -140,8 +143,22 @@ function sendUserData() {
 function printUserData() {
   saveFormValues();
   sendUserData();
+  
 }
-
+function storageData (){
+  let recoverData= JSON.parse(localStorage.getItem('userData'));
+  console.log(recoverData);
+  debugger;
+  if( recoverData !== 0){    
+   printName.innerHTML = recoverData.name;
+   printJob.innerHTML =  recoverData.job;
+   printPhone.href = `tel:` + recoverData.phone;
+   printEmail.href = `mailto:` + recoverData.email;
+   printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
+   printGithub.href = `https://github.com/` + recoverData.github;   
+  }
+}
+document.addEventListener('load', storageData);
 inputName.addEventListener ('keyup', printUserData);
 inputJob.addEventListener ('keyup', printUserData);
 inputPhone.addEventListener ('keyup', printUserData);
@@ -177,3 +194,5 @@ function resetForm() {
   iconChangeYellow();
 }
 resetButton.addEventListener ('click', resetForm);
+
+
