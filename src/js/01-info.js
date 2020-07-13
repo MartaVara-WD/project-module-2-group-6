@@ -143,7 +143,6 @@ function sendUserData() {
 function printUserData() {
   saveFormValues();
   sendUserData();
-  
 }
 function storageData() {
   let recoverData = JSON.parse(localStorage.getItem('userData'));
