@@ -9,12 +9,11 @@ const styleRed = document.querySelector ('.style-red');
 const styleYellow = document.querySelector ('.style-yellow');
 
 //variables del cambio de estilos//
-
 const colorLeftSquare = document.querySelector ('.js-square');
 const colorName = document.querySelector ('.js-name-print');
 const colorBackground = document.querySelector ('.js-background');
 
-//estos seleccionan grupos de cosas
+//estos seleccionan los grupos de iconos y de bordes de iconos
 const colorIcons = document.querySelectorAll ('.js-icon');
 const colorBorder = document.querySelectorAll ('.js-border');
 
@@ -90,11 +89,10 @@ function removeColors (palette) {
   }
 }
 
-//iconColorChange();
-
 styleBlue.addEventListener ('click', handlerStyle);
 styleRed.addEventListener ('click', handlerStyle);
 styleYellow.addEventListener ('click', handlerStyle);
+const allInput = document.querySelectorAll('.js-input');
 
 const inputName = document.querySelector ('.js-name');
 const inputJob = document.querySelector ('.js-job');
@@ -102,20 +100,22 @@ const inputPhone = document.querySelector ('.js-phone');
 const inputEmail = document.querySelector ('.js-email');
 const inputLinkedin = document.querySelector ('.js-linkedin');
 const inputGithub = document.querySelector ('.js-github');
-const printPhone = document.querySelector ('.js-phone-icon');
-const printName = document.querySelector ('.card__top__title__name');
-const printJob = document.querySelector ('.card__top__title__role');
-const printEmail = document.querySelector ('.js-email-icon');
-const printLinkedin = document.querySelector ('.js-linkedin-print');
-const printGithub = document.querySelector ('.js-github-print');
 
-//empty object
+const input = {
+  name: document.querySelector ('.js-name'),
+  phone: document.querySelector('.js-phone'),
+  job: document.querySelector ('.js-job'),
+  email: document.querySelector ('.js-email'),
+  linkedin: document.querySelector ('.js-linkedin'),
+  github: document.querySelector ('.js-github'),
+  paletteNum: 1
+};
 
-const userData = {};
 
 //función que guarda los datos
-
-function saveFormValues() {
+function saveFormValues(ev) {
+  // data = input.id;
+  // value = input.
   userData.name = inputName.value;
   userData.job = inputJob.value;
   userData.phone = inputPhone.value;
@@ -127,7 +127,38 @@ function saveFormValues() {
   localStorage.setItem('userData', JSON.stringify(userData));
 }
 
+// const print = {
+//   phone: document.querySelector('.js-phone-icon'),
+//   name: document.querySelector ('.card__top__title__name'),
+//   job: document.querySelector ('.card__top__title__role'),
+//   email: document.querySelector ('.js-email-icon'),
+//   linkedin: document.querySelector ('.js-linkedin-print'),
+//   github: document.querySelector ('.js-github-print')
+// };
 
+
+const printPhone = document.querySelector ('.js-phone-icon');
+const printName = document.querySelector ('.card__top__title__name');
+const printJob = document.querySelector ('.card__top__title__role');
+const printEmail = document.querySelector ('.js-email-icon');
+const printLinkedin = document.querySelector ('.js-linkedin-print');
+const printGithub = document.querySelector ('.js-github-print');
+
+//create empty object to save user info
+const userData = {};
+
+//función que guarda los datos
+function saveFormValues() {
+  userData.name = inputName.value;
+  userData.job = inputJob.value;
+  userData.phone = inputPhone.value;
+  userData.email = inputEmail.value;
+  userData.linkedin = inputLinkedin.value;
+  userData.github = inputGithub.value;
+  userData.palette = number;
+  userData.photo = photoForm;
+  localStorage.setItem('userData', JSON.stringify(userData));
+}
 
 //envía los datos a la tarjeta
 function sendUserData() {
