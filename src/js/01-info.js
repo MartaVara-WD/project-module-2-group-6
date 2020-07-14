@@ -247,9 +247,11 @@ const form = document.querySelector ('.js-form');
 //limpia el formulario(no la tarjeta)
 function resetForm() {
   form.reset();
+  userData = '';
+  localStorage.setItem('userData', JSON.stringify(userData));
 
-  // función que imprime la info en la tarjeta
-  //printUserData();
+  //Recarga la página y se queda con los valores iniciales
+  //location.reload();
   changeColors(palette1);
   removeColors(palette2);
   removeColors(palette3);
@@ -258,7 +260,6 @@ function resetForm() {
   print.job.innerHTML = 'Front-en developer';
   userData = '';
   localStorage.setItem('userData', JSON.stringify(userData));
-  //storage.clear();
   //vuelve a la imagen por defecto
   document.querySelector ('.js__profile-image').removeAttribute ('style');
   document.querySelector ('.js__profile-preview').removeAttribute ('style');

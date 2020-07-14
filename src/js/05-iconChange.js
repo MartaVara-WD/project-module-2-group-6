@@ -157,7 +157,7 @@ function iconChangeYellow() {
 }
 
 function iconChangeRed() {
-  // valores de los inputs
+  //valores de los inputs
 
   let inputValueEmail = input.email.value;
   let inputValueGithub = input.github.value;
