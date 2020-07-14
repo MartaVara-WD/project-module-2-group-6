@@ -218,12 +218,12 @@ function storageData() {
 }
 
 function tickPalette() {
-  if (userData['palette'] === 1) {
-    document.querySelector('.js-input-blue').checked = true;
+  if (userData['palette'] === 3) {
+    document.querySelector('.js-input-yellow').checked = true;
   } else if (userData['palette'] === 2) {
     document.querySelector('.js-input-red').checked = true;
   } else {
-    document.querySelector('.js-input-yellow').checked = true;
+    document.querySelector('.js-input-blue').checked = true;
   }
 }
 // printName.innerHTML = recoverData.name;
