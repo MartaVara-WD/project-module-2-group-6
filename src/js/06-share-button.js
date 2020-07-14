@@ -7,10 +7,10 @@ function buttonActive() {
   let inputValueLinkedin = input.linkedin.value;
 
   if (
-    inputValueEmail !== 0 &&
-    inputValueGithub !== 0 &&
-    inputValuePhone !== 0 &&
-    inputValueLinkedin !== 0
+    inputValueEmail.length !== 0 &&
+    inputValueGithub.length !== 0 &&
+    inputValuePhone.length !== 0 &&
+    inputValueLinkedin.length !== 0
   ) {
     buttonCard.classList.add('active');
     buttonCard.classList.remove('inactive');

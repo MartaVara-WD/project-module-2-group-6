@@ -421,8 +421,7 @@
       transform: translateY(4px);
     }
     &:hover {
-      background-color: $color-medium-yellow;
-      cursor: url('./assets/images/cursor-sailor.png'), auto;
+      cursor: url('./images/cursor-sailor.png'), auto;
     }
   }
   .inactive {
