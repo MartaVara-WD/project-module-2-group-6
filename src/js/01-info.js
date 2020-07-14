@@ -214,7 +214,6 @@ function storageData() {
   }
 }
 
-
 function tickpalette() {
   if(userData['palette'] === 1){
     document.querySelector('.js-input-blue').checked = true;
