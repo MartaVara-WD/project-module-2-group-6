@@ -40,29 +40,45 @@ const palette3 = [
   'style-yellow-background-icon',
 ];
 
-function handlerStyle () {
+function checkStyle(style) {
+  if(style === 'style-blue') {
+    userData.palette = 1;
+  } else if (style === 'style-red') {
+    userData.palette = 2;
+  } else {
+    userData.palette = 3;
+  }
+}
+
+function handlerStyle (event) {
   iconChangeBlue ();
   iconChangeRed ();
   iconChangeYellow ();
+  if(event !== undefined) {
+    const style = event.currentTarget.classList.value;
+    checkStyle(style);
+  }
 
   //Muestra cuál es el evento actual//
-  if (event.currentTarget.classList.value === 'style-blue') {
+  if (userData.palette === 1) {
     input.palette = 1;
     changeColors (palette1);
     removeColors (palette2);
     removeColors (palette3);
-  } else if (event.currentTarget.classList.value === 'style-red') {
+
+  } else if (userData.palette === 2) {
     input.palette = 2;
     changeColors (palette2);
     removeColors (palette1);
     removeColors (palette3);
-  } else if (event.currentTarget.classList.value === 'style-yellow') {
+
+  } else if (userData.palette === 3) {
     input.palette = 3;
     changeColors (palette3);
     removeColors (palette1);
     removeColors (palette2);
   }
-  saveFormValues(palette);
+  saveFormValues('palette');
 }
 
 function changeColors (palette) {
@@ -131,7 +147,11 @@ const userData = {};
 
 //función que guarda los datos
 function saveFormValues(data) {
-  userData[data] = input[data].value;
+  if(data !== 'palette') {
+    userData[data] = input[data].value;
+  } else {
+    userData[data] = input[data];
+  }
   // userData.job = inputJob.value;
   // userData.phone = inputPhone.value;
   // userData.email = inputEmail.value;
@@ -158,6 +178,8 @@ function sendUserData(data) {
   } else if(data === 'photo') {
     let image = userData[data];
     writeLocalImage(image);
+  } else {
+    handlerStyle();
   }
   // antiguo
   // printName.innerHTML = userData.name;
@@ -181,28 +203,42 @@ function storageData() {
       if((item !== 'photo') && (item !== 'palette')) {
         input[item].value = recoverData[item];
         userData[item] = recoverData[item];
+      } else if(item === 'photo'){
+        userData[item] = recoverData[item];
       } else {
         userData[item] = recoverData[item];
+        tickpalette();
       }
       sendUserData(item);
     }
-
-    // printName.innerHTML = recoverData.name;
-    // printJob.innerHTML =  recoverData.job;
-    // printPhone.href = `tel:` + recoverData.phone;
-    // printEmail.href = `mailto:` + recoverData.email;
-    // printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
-    // printGithub.href = `https://github.com/` + recoverData.github;
-    // inputName.value = recoverData.name;
-    // inputJob.value = recoverData.job;
-    // inputPhone.value = recoverData.phone;
-    // inputEmail.value = recoverData.email;
-    // inputLinkedin.value = recoverData.linkedin;
-    // inputGithub.value = recoverData.github;
-    // number = recoverData.palette;
-    // photoForm = recoverData.photo;
   }
 }
+
+
+function tickpalette() {
+  if(userData['palette'] === 1){
+    document.querySelector('.js-input-blue').checked = true;
+  } else if(userData['palette'] === 2) {
+    document.querySelector('.js-input-red').checked = true;
+  } else {
+    document.querySelector('.js-input-yellow').checked = true;
+  }
+}
+// printName.innerHTML = recoverData.name;
+// printJob.innerHTML =  recoverData.job;
+// printPhone.href = `tel:` + recoverData.phone;
+// printEmail.href = `mailto:` + recoverData.email;
+// printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
+// printGithub.href = `https://github.com/` + recoverData.github;
+// inputName.value = recoverData.name;
+// inputJob.value = recoverData.job;
+// inputPhone.value = recoverData.phone;
+// inputEmail.value = recoverData.email;
+// inputLinkedin.value = recoverData.linkedin;
+// inputGithub.value = recoverData.github;
+// number = recoverData.palette;
+// photoForm = recoverData.photo;
+
 
 document.addEventListener('DOMContentLoaded', storageData);
 
