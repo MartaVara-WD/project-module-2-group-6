@@ -66,36 +66,6 @@ const colorIconBackgroundGithub = document.querySelector(
 //   }
 // }
 
-//EJEMPLO DE FER
-// function changeBackground() {
-//   let css = '.fondo';
-//   if (azul.checked) {
-//     css = '.azul';
-//   }
-//   if (verde.checked) {
-//     css = '.verde';
-//   }
-//   if (rojo.checked) {
-//     css = '.rojo';
-//   }
-
-//   if (usedata.email != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-//   if (usedata.github != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-//   if (usedata.patata != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-// }
-
 function iconChangeBlue() {
   // valores de los inputs
 
@@ -185,7 +155,6 @@ function iconChangeRed() {
     colorIconBackgroundPhone.classList.remove('style-red-background-icon');
   }
 }
-
 
 function iconChangeGeneral() {
   iconChangeBlue();
