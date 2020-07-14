@@ -26,8 +26,8 @@ function sendData() {
 }
 
 function createCard(event) {
-  buttonContainer.classList.remove('active');
-  buttonContainer.classList.add('inactive');
+  buttonCard.classList.remove('active');
+  buttonCard.classList.add('inactive');
   buttonTwitter.classList.remove('hidden');
   console.log(userData);
   showURL();
