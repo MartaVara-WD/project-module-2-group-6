@@ -349,6 +349,7 @@
     }
     &__button {
       &__button {
+        background-color: $color-grey-button;
         margin: 60px auto auto 60px;
         width: 199px;
         height: 50px;
@@ -421,7 +422,8 @@
       transform: translateY(4px);
     }
     &:hover {
-      cursor: url('./images/cursor-sailor.png'), auto;
+      background-color: $color-medium-yellow;
+      cursor: url('../images/cursor-sailor.png'), auto;
     }
   }
   .inactive {

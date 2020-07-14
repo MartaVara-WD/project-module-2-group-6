@@ -59,10 +59,7 @@ function showURL(result) {
     const tweet = '✨Echa un vistazo a mi tarjeta de visita Sailor Code ✨ ';
 
     url.innerHTML = `${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
-    url.setAttribute(
-      'href',
-      `https://twitter.com/intent/tweet?text=${tweet}&url=${result.cardURL}`
-    );
+    url.setAttribute('href', `${result.cardURL}`);
 
     twitterButton.setAttribute(
       'href',
