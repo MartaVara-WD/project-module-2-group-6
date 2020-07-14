@@ -32,9 +32,8 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
-  photoForm = fr.result;
-  printUserData();
-
+  userData.photo = fr.result;
+  localStorage.setItem('userData', JSON.stringify(userData));
 }
 
 /**
@@ -44,6 +43,11 @@ function writeImage() {
 function fakeFileClick(event) {
   event.preventDefault();
   fileField.click();
+}
+
+function writeLocalImage(image){
+  profileImage.style.backgroundImage = `url(${image})`;
+  profilePreview.style.backgroundImage = `url(${image})`;
 }
 
 /**

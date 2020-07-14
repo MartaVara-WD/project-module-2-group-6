@@ -47,21 +47,22 @@ function handlerStyle () {
 
   //Muestra cuál es el evento actual//
   if (event.currentTarget.classList.value === 'style-blue') {
-    number = 1;
+    input.palette = 1;
     changeColors (palette1);
     removeColors (palette2);
     removeColors (palette3);
   } else if (event.currentTarget.classList.value === 'style-red') {
-    number = 2;
+    input.palette = 2;
     changeColors (palette2);
     removeColors (palette1);
     removeColors (palette3);
   } else if (event.currentTarget.classList.value === 'style-yellow') {
-    number = 3;
+    input.palette = 3;
     changeColors (palette3);
     removeColors (palette1);
     removeColors (palette2);
   }
+  saveFormValues(palette);
 }
 
 function changeColors (palette) {
@@ -94,12 +95,18 @@ styleRed.addEventListener ('click', handlerStyle);
 styleYellow.addEventListener ('click', handlerStyle);
 const allInput = document.querySelectorAll('.js-input');
 
-const inputName = document.querySelector ('.js-name');
-const inputJob = document.querySelector ('.js-job');
-const inputPhone = document.querySelector ('.js-phone');
-const inputEmail = document.querySelector ('.js-email');
-const inputLinkedin = document.querySelector ('.js-linkedin');
-const inputGithub = document.querySelector ('.js-github');
+// const inputName = document.querySelector ('.js-name');
+// const inputJob = document.querySelector ('.js-job');
+// const inputPhone = document.querySelector ('.js-phone');
+// const inputEmail = document.querySelector ('.js-email');
+// const inputLinkedin = document.querySelector ('.js-linkedin');
+// const inputGithub = document.querySelector ('.js-github');
+// const printPhone = document.querySelector ('.js-phone-icon');
+// const printName = document.querySelector ('.card__top__title__name');
+// const printJob = document.querySelector ('.card__top__title__role');
+// const printEmail = document.querySelector ('.js-email-icon');
+// const printLinkedin = document.querySelector ('.js-linkedin-print');
+// const printGithub = document.querySelector ('.js-github-print');
 
 const input = {
   name: document.querySelector ('.js-name'),
@@ -108,101 +115,104 @@ const input = {
   email: document.querySelector ('.js-email'),
   linkedin: document.querySelector ('.js-linkedin'),
   github: document.querySelector ('.js-github'),
-  paletteNum: 1
+  palette: 1,
 };
 
-
-//función que guarda los datos
-function saveFormValues(ev) {
-  // data = input.id;
-  // value = input.
-  userData.name = inputName.value;
-  userData.job = inputJob.value;
-  userData.phone = inputPhone.value;
-  userData.email = inputEmail.value;
-  userData.linkedin = inputLinkedin.value;
-  userData.github = inputGithub.value;
-  userData.palette = number;
-  userData.photo = photoForm;
-  localStorage.setItem('userData', JSON.stringify(userData));
-}
-
-// const print = {
-//   phone: document.querySelector('.js-phone-icon'),
-//   name: document.querySelector ('.card__top__title__name'),
-//   job: document.querySelector ('.card__top__title__role'),
-//   email: document.querySelector ('.js-email-icon'),
-//   linkedin: document.querySelector ('.js-linkedin-print'),
-//   github: document.querySelector ('.js-github-print')
-// };
-
-
-const printPhone = document.querySelector ('.js-phone-icon');
-const printName = document.querySelector ('.card__top__title__name');
-const printJob = document.querySelector ('.card__top__title__role');
-const printEmail = document.querySelector ('.js-email-icon');
-const printLinkedin = document.querySelector ('.js-linkedin-print');
-const printGithub = document.querySelector ('.js-github-print');
-
+let print = {
+  phone: document.querySelector('.js-phone-icon'),
+  name: document.querySelector ('.card__top__title__name'),
+  job: document.querySelector ('.card__top__title__role'),
+  email: document.querySelector ('.js-email-icon'),
+  linkedin: document.querySelector ('.js-linkedin-print'),
+  github: document.querySelector ('.js-github-print')
+};
 //create empty object to save user info
 const userData = {};
 
 //función que guarda los datos
-function saveFormValues() {
-  userData.name = inputName.value;
-  userData.job = inputJob.value;
-  userData.phone = inputPhone.value;
-  userData.email = inputEmail.value;
-  userData.linkedin = inputLinkedin.value;
-  userData.github = inputGithub.value;
-  userData.palette = number;
-  userData.photo = photoForm;
+function saveFormValues(data) {
+  userData[data] = input[data].value;
+  // userData.job = inputJob.value;
+  // userData.phone = inputPhone.value;
+  // userData.email = inputEmail.value;
+  // userData.linkedin = inputLinkedin.value;
+  // userData.github = inputGithub.value;
+  // userData.palette = number;
+  // userData.photo = photoForm;
   localStorage.setItem('userData', JSON.stringify(userData));
+  return userData[data];
 }
 
 //envía los datos a la tarjeta
-function sendUserData() {
-  printName.innerHTML = userData.name;
-  printJob.innerHTML = userData.job;
-  printPhone.href = `tel:` + userData.phone;
-  printEmail.href = `mailto:` + userData.email;
-  printLinkedin.href = `https://www.linkedin.com/in/` + userData.linkedin;
-  printGithub.href = `https://github.com/` + userData.github;
+function sendUserData(data) {
+  if((data === 'name') || (data === 'job')){
+    print[data].innerHTML = userData[data];
+  } else if(data === 'phone') {
+    print[data].hef = `tel:` + userData[data];
+  } else if(data === 'email') {
+    print[data].hef = `mailto:` + userData[data];
+  } else if(data === 'linkedin') {
+    print[data].hef = `https://www.linkedin.com/in/` + userData[data];
+  } else if(data === 'github') {
+    print[data].hef = `https://github.com/` + userData[data];
+  } else if(data === 'photo') {
+    let image = userData[data];
+    writeLocalImage(image);
+  }
+  // antiguo
+  // printName.innerHTML = userData.name;
+  // printJob.innerHTML = userData.job;
+  // printPhone.href = `tel:` + userData.phone;
+  // printEmail.href = `mailto:` + userData.email;
+  // printLinkedin.href = `https://www.linkedin.com/in/` + userData.linkedin;
+  // printGithub.href = `https://github.com/` + userData.github;
 }
 
 // esta hace magia y lo cambia en la tarjeta
-function printUserData() {
-  saveFormValues();
-  sendUserData();
+function printUserData(ev) {
+  const id = ev.currentTarget.id;
+  saveFormValues(id);
+  sendUserData(id);
 }
 function storageData() {
   let recoverData = JSON.parse(localStorage.getItem('userData'));
-  if( recoverData !== 0){
-    printName.innerHTML = recoverData.name;
-    printJob.innerHTML =  recoverData.job;
-    printPhone.href = `tel:` + recoverData.phone;
-    printEmail.href = `mailto:` + recoverData.email;
-    printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
-    printGithub.href = `https://github.com/` + recoverData.github;
-    inputName.value = recoverData.name;
-    inputJob.value = recoverData.job;
-    inputPhone.value = recoverData.phone;
-    inputEmail.value = recoverData.email;
-    inputLinkedin.value = recoverData.linkedin;
-    inputGithub.value = recoverData.github;
-    number = recoverData.palette;
-    photoForm = recoverData.photo;
-    saveFormValues();
+  if(recoverData !== 0){
+    for(let item of Object.keys(recoverData)) {
+      if((item !== 'photo') && (item !== 'palette')) {
+        input[item].value = recoverData[item];
+        userData[item] = recoverData[item];
+      } else {
+        userData[item] = recoverData[item];
+      }
+      sendUserData(item);
+    }
+
+    // printName.innerHTML = recoverData.name;
+    // printJob.innerHTML =  recoverData.job;
+    // printPhone.href = `tel:` + recoverData.phone;
+    // printEmail.href = `mailto:` + recoverData.email;
+    // printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
+    // printGithub.href = `https://github.com/` + recoverData.github;
+    // inputName.value = recoverData.name;
+    // inputJob.value = recoverData.job;
+    // inputPhone.value = recoverData.phone;
+    // inputEmail.value = recoverData.email;
+    // inputLinkedin.value = recoverData.linkedin;
+    // inputGithub.value = recoverData.github;
+    // number = recoverData.palette;
+    // photoForm = recoverData.photo;
   }
 }
 
 document.addEventListener('DOMContentLoaded', storageData);
-inputName.addEventListener ('keyup', printUserData);
-inputJob.addEventListener ('keyup', printUserData);
-inputPhone.addEventListener ('keyup', printUserData);
-inputEmail.addEventListener ('keyup', printUserData);
-inputLinkedin.addEventListener ('keyup', printUserData);
-inputGithub.addEventListener ('keyup', printUserData);
+
+
+// inputName.addEventListener ('keyup', printUserData);
+// inputJob.addEventListener ('keyup', printUserData);
+// inputPhone.addEventListener ('keyup', printUserData);
+// inputEmail.addEventListener ('keyup', printUserData);
+// inputLinkedin.addEventListener ('keyup', printUserData);
+// inputGithub.addEventListener ('keyup', printUserData);
 
 const resetButton = document.querySelector ('.js-reset-button');
 const form = document.querySelector ('.js-form');
@@ -233,4 +243,10 @@ function resetForm() {
 }
 resetButton.addEventListener ('click', resetForm);
 
+createEvent();
+function createEvent() {
+  for(let item of allInput) {
+    item.addEventListener('keyup', printUserData);
+  }
+}
 
