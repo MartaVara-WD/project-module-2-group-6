@@ -214,6 +214,7 @@ function storageData() {
       sendUserData(item);
     }
   }
+  buttonActive();
 }
 
 function tickPalette() {
