@@ -163,8 +163,12 @@ function saveFormValues(data) {
 
 //envía los datos a la tarjeta
 function sendUserData(data) {
-  if (data === 'name' || data === 'job') {
+  if ((data === 'name' || data === 'job') && (userData[data].length !== 0)) {
     print[data].innerHTML = userData[data];
+  } else if((data === 'name') && (userData[data].length === 0)) {
+    print[data].innerHTML = 'Nombre Apellido';
+  } else if((data === 'job') && (userData[data].length === 0)) {
+    print[data].innerHTML = 'Front-en developer';
   } else if (data === 'phone') {
     print[data].hef = `tel:` + userData[data];
   } else if (data === 'email') {
