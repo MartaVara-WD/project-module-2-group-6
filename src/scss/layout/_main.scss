@@ -1,8 +1,9 @@
 /*Fondo general main*/
 
 .page__main {
-  min-height: 780px;
+  min-height: 800px;
   background-color: $color-tertiary-light;
+  margin-bottom: 50px;
   @include tablet {
     display: flex;
     justify-content: center;

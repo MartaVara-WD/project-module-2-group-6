@@ -1,6 +1,5 @@
 .main {
-  height: 600px;
-  overflow: hidden;
+  height: 88vh;
 }
 
 .front {
@@ -78,7 +77,7 @@
     text-transform: uppercase;
     padding-top: 10px;
     border-radius: rem(21);
-    transition: background-color ease-in 0.5s;
+    transition: background-color ease-in 0.2s;
 
     &:hover {
       animation: pulse 0.5s;
@@ -87,7 +86,6 @@
     }
 
     @include tablet {
-      margin-top: 186px;
       margin-bottom: 59px;
     }
   }
