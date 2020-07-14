@@ -247,7 +247,9 @@ const form = document.querySelector ('.js-form');
 //limpia el formulario(no la tarjeta)
 function resetForm() {
   form.reset();
-  userData = '';
+  for(let item of Object.keys(userData)){
+    userData[item] = '';
+  }
   localStorage.setItem('userData', JSON.stringify(userData));
 
   //Recarga la página y se queda con los valores iniciales
@@ -258,7 +260,7 @@ function resetForm() {
   //vuelven a escribir la info por defecto de nombre y puesto
   print.name.innerHTML = 'Nombre Apellido';
   print.job.innerHTML = 'Front-en developer';
-  userData = '';
+
   localStorage.setItem('userData', JSON.stringify(userData));
   //vuelve a la imagen por defecto
   document.querySelector ('.js__profile-image').removeAttribute ('style');
