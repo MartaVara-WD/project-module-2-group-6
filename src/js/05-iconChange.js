@@ -160,8 +160,8 @@ function iconChangeRed() {
   // valores de los inputs
 
   let inputValueEmail = input.email.value;
-  let inputValueGithub = input-github.value;
-  let inputValuePhone = input-phone.value;
+  let inputValueGithub = input.github.value;
+  let inputValuePhone = input.phone.value;
   let inputValueLinkedin = input.linkedin.value;
 
   if (inputValueEmail.length !== 0 && inputRed.checked) {

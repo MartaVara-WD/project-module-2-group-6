@@ -123,7 +123,6 @@ const allInput = document.querySelectorAll('.js-input');
 // const printEmail = document.querySelector ('.js-email-icon');
 // const printLinkedin = document.querySelector ('.js-linkedin-print');
 // const printGithub = document.querySelector ('.js-github-print');
-
 const input = {
   name: document.querySelector ('.js-name'),
   phone: document.querySelector('.js-phone'),
@@ -170,11 +169,11 @@ function sendUserData(data) {
   } else if(data === 'phone') {
     print[data].hef = `tel:` + userData[data];
   } else if(data === 'email') {
-    print[data].hef = `mailto:` + userData[data];
+    print[data].setAttribute('href', `mailto:${userData[data]}`);
   } else if(data === 'linkedin') {
-    print[data].hef = `https://www.linkedin.com/in/` + userData[data];
+    print[data].setAttribute('href', `https://www.linkedin.com/in/${userData[data]}`);
   } else if(data === 'github') {
-    print[data].hef = `https://github.com/` + userData[data];
+    print[data].setAttribute('href', `https://github.com/${userData[data]}`);
   } else if(data === 'photo') {
     let image = userData[data];
     writeLocalImage(image);
@@ -194,7 +193,7 @@ function sendUserData(data) {
 function printUserData(ev) {
   const id = ev.currentTarget.id;
   saveFormValues(id);
-  sendUserData(id);
+  sendUserData(id, userData);
 }
 function storageData() {
   let recoverData = JSON.parse(localStorage.getItem('userData'));
