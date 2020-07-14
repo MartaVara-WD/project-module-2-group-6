@@ -142,7 +142,8 @@ let print = {
   github: document.querySelector ('.js-github-print')
 };
 //create empty object to save user info
-const userData = {};
+let userData = {};
+let recoverData = '';
 
 //función que guarda los datos
 function saveFormValues(data) {
@@ -196,7 +197,7 @@ function printUserData(ev) {
   sendUserData(id, userData);
 }
 function storageData() {
-  let recoverData = JSON.parse(localStorage.getItem('userData'));
+  recoverData = JSON.parse(localStorage.getItem('userData'));
   if(recoverData !== 0){
     for(let item of Object.keys(recoverData)) {
       if((item !== 'photo') && (item !== 'palette')) {
@@ -240,14 +241,6 @@ function tickpalette() {
 
 document.addEventListener('DOMContentLoaded', storageData);
 
-
-// inputName.addEventListener ('keyup', printUserData);
-// inputJob.addEventListener ('keyup', printUserData);
-// inputPhone.addEventListener ('keyup', printUserData);
-// inputEmail.addEventListener ('keyup', printUserData);
-// inputLinkedin.addEventListener ('keyup', printUserData);
-// inputGithub.addEventListener ('keyup', printUserData);
-
 const resetButton = document.querySelector ('.js-reset-button');
 const form = document.querySelector ('.js-form');
 
@@ -256,13 +249,16 @@ function resetForm() {
   form.reset();
 
   // función que imprime la info en la tarjeta
-  printUserData();
+  //printUserData();
   changeColors(palette1);
   removeColors(palette2);
   removeColors(palette3);
   //vuelven a escribir la info por defecto de nombre y puesto
-  printName.innerHTML = 'Nombre Apellido';
-  printJob.innerHTML = 'Front-en developer';
+  print.name.innerHTML = 'Nombre Apellido';
+  print.job.innerHTML = 'Front-en developer';
+  userData = '';
+  localStorage.setItem('userData', JSON.stringify(userData));
+  //storage.clear();
   //vuelve a la imagen por defecto
   document.querySelector ('.js__profile-image').removeAttribute ('style');
   document.querySelector ('.js__profile-preview').removeAttribute ('style');
@@ -275,6 +271,7 @@ function resetForm() {
   iconChangeRed();
   iconChangeYellow();
 }
+
 resetButton.addEventListener ('click', resetForm);
 
 createEvent();
@@ -283,4 +280,9 @@ function createEvent() {
     item.addEventListener('keyup', printUserData);
   }
 }
-
+// inputName.addEventListener ('keyup', printUserData);
+// inputJob.addEventListener ('keyup', printUserData);
+// inputPhone.addEventListener ('keyup', printUserData);
+// inputEmail.addEventListener ('keyup', printUserData);
+// inputLinkedin.addEventListener ('keyup', printUserData);
+// inputGithub.addEventListener ('keyup', printUserData);

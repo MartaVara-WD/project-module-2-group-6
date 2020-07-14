@@ -128,8 +128,8 @@ function iconChangeBlue() {
 
 function iconChangeYellow() {
   let inputValueEmail = input.email.value;
-  let inputValueGithub = input-github.value;
-  let inputValuePhone = input-phone.value;
+  let inputValueGithub = input.github.value;
+  let inputValuePhone = input.phone.value;
   let inputValueLinkedin = input.linkedin.value;
 
   if (inputValueEmail.length !== 0 && inputYellow.checked) {
@@ -186,17 +186,24 @@ function iconChangeRed() {
   }
 }
 
-input.email.addEventListener('keyup', iconChangeBlue);
-input.github.addEventListener('keyup', iconChangeBlue);
-input.linkedin.addEventListener('keyup', iconChangeBlue);
-input.phone.addEventListener('keyup', iconChangeBlue);
 
-input.email.addEventListener('keyup', iconChangeRed);
-input.github.addEventListener('keyup', iconChangeRed);
-input.linkedin.addEventListener('keyup', iconChangeRed);
-input.phone.addEventListener('keyup', iconChangeRed);
+function iconChangeGeneral() {
+  iconChangeBlue();
+  iconChangeRed();
+  iconChangeYellow();
+}
 
-input.email.addEventListener('keyup', iconChangeYellow);
-input.github.addEventListener('keyup', iconChangeYellow);
-input.linkedin.addEventListener('keyup', iconChangeYellow);
-input.phone.addEventListener('keyup', iconChangeYellow);
+input.email.addEventListener('keyup', iconChangeGeneral);
+input.github.addEventListener('keyup', iconChangeGeneral);
+input.linkedin.addEventListener('keyup', iconChangeGeneral);
+input.phone.addEventListener('keyup', iconChangeGeneral);
+
+// input.email.addEventListener('keyup', iconChangeRed);
+// input.github.addEventListener('keyup', iconChangeRed);
+// input.linkedin.addEventListener('keyup', iconChangeRed);
+// input.phone.addEventListener('keyup', iconChangeRed);
+
+// input.email.addEventListener('keyup', iconChangeYellow);
+// input.github.addEventListener('keyup', iconChangeYellow);
+// input.linkedin.addEventListener('keyup', iconChangeYellow);
+// input.phone.addEventListener('keyup', iconChangeYellow);
