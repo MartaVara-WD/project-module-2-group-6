@@ -26,8 +26,8 @@ function sendData() {
 }
 
 function createCard(event) {
-  buttonContainer.classList.remove('active');
-  buttonContainer.classList.add('inactive');
+  buttonCard.classList.remove('active');
+  buttonCard.classList.add('inactive');
   buttonTwitter.classList.remove('hidden');
   console.log(userData);
   showURL();
@@ -52,12 +52,14 @@ buttonCard.addEventListener('click', function (event) {
       console.log(error);
     });
 });
+
 function showURL(result) {
   console.log(result);
   if (result.success) {
     const tweet = '✨Echa un vistazo a mi tarjeta de visita Sailor Code ✨ ';
 
     url.innerHTML = `${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
+    url.setAttribute('href', `${result.cardURL}`);
 
     twitterButton.setAttribute(
       'href',
