@@ -66,43 +66,13 @@ const colorIconBackgroundGithub = document.querySelector(
 //   }
 // }
 
-//EJEMPLO DE FER
-// function changeBackground() {
-//   let css = '.fondo';
-//   if (azul.checked) {
-//     css = '.azul';
-//   }
-//   if (verde.checked) {
-//     css = '.verde';
-//   }
-//   if (rojo.checked) {
-//     css = '.rojo';
-//   }
-
-//   if (usedata.email != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-//   if (usedata.github != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-//   if (usedata.patata != '') {
-//     btnemail.css.add(css);
-//   } else {
-//     //quitar fondo
-//   }
-// }
-
 function iconChangeBlue() {
   // valores de los inputs
 
-  let inputValueEmail = inputEmail.value;
-  let inputValueGithub = inputGithub.value;
-  let inputValuePhone = inputPhone.value;
-  let inputValueLinkedin = inputLinkedin.value;
+  let inputValueEmail = input.email.value;
+  let inputValueGithub = input.github.value;
+  let inputValuePhone = input.phone.value;
+  let inputValueLinkedin = input.linkedin.value;
 
   if (inputValueEmail.length !== 0 && inputBlue.checked) {
     colorIconBackgroundMail.classList.add('style-blue-background-icon');
@@ -127,10 +97,10 @@ function iconChangeBlue() {
 }
 
 function iconChangeYellow() {
-  let inputValueEmail = inputEmail.value;
-  let inputValueGithub = inputGithub.value;
-  let inputValuePhone = inputPhone.value;
-  let inputValueLinkedin = inputLinkedin.value;
+  let inputValueEmail = input.email.value;
+  let inputValueGithub = input.github.value;
+  let inputValuePhone = input.phone.value;
+  let inputValueLinkedin = input.linkedin.value;
 
   if (inputValueEmail.length !== 0 && inputYellow.checked) {
     colorIconBackgroundMail.classList.add('style-yellow-background-icon');
@@ -157,12 +127,12 @@ function iconChangeYellow() {
 }
 
 function iconChangeRed() {
-  // valores de los inputs
+  //valores de los inputs
 
-  let inputValueEmail = inputEmail.value;
-  let inputValueGithub = inputGithub.value;
-  let inputValuePhone = inputPhone.value;
-  let inputValueLinkedin = inputLinkedin.value;
+  let inputValueEmail = input.email.value;
+  let inputValueGithub = input.github.value;
+  let inputValuePhone = input.phone.value;
+  let inputValueLinkedin = input.linkedin.value;
 
   if (inputValueEmail.length !== 0 && inputRed.checked) {
     colorIconBackgroundMail.classList.add('style-red-background-icon');
@@ -186,17 +156,23 @@ function iconChangeRed() {
   }
 }
 
-inputEmail.addEventListener('keyup', iconChangeBlue);
-inputGithub.addEventListener('keyup', iconChangeBlue);
-inputLinkedin.addEventListener('keyup', iconChangeBlue);
-inputPhone.addEventListener('keyup', iconChangeBlue);
+function iconChangeGeneral() {
+  iconChangeBlue();
+  iconChangeRed();
+  iconChangeYellow();
+}
 
-inputEmail.addEventListener('keyup', iconChangeRed);
-inputGithub.addEventListener('keyup', iconChangeRed);
-inputLinkedin.addEventListener('keyup', iconChangeRed);
-inputPhone.addEventListener('keyup', iconChangeRed);
+input.email.addEventListener('keyup', iconChangeGeneral);
+input.github.addEventListener('keyup', iconChangeGeneral);
+input.linkedin.addEventListener('keyup', iconChangeGeneral);
+input.phone.addEventListener('keyup', iconChangeGeneral);
 
-inputEmail.addEventListener('keyup', iconChangeYellow);
-inputGithub.addEventListener('keyup', iconChangeYellow);
-inputLinkedin.addEventListener('keyup', iconChangeYellow);
-inputPhone.addEventListener('keyup', iconChangeYellow);
+// input.email.addEventListener('keyup', iconChangeRed);
+// input.github.addEventListener('keyup', iconChangeRed);
+// input.linkedin.addEventListener('keyup', iconChangeRed);
+// input.phone.addEventListener('keyup', iconChangeRed);
+
+// input.email.addEventListener('keyup', iconChangeYellow);
+// input.github.addEventListener('keyup', iconChangeYellow);
+// input.linkedin.addEventListener('keyup', iconChangeYellow);
+// input.phone.addEventListener('keyup', iconChangeYellow);

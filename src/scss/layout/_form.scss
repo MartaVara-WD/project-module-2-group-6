@@ -33,6 +33,43 @@
         height: 18px;
         color: $color-accenture;
       }
+      .moonicondown {
+        color: $color-medium-yellow;
+        transform: rotate(110deg);
+
+        &:hover {
+          animation: rotate;
+          animation-duration: 1.5s;
+          animation-iteration-count: 1;
+          animation-timing-function: linear;
+        }
+        @keyframes rotate {
+          from {
+            transform: rotate(110deg);
+          }
+          to {
+            transform: rotate(460deg);
+          }
+        }
+      }
+      .mooniconup {
+        color: $color-medium-yellow;
+        transform: rotate(-70deg);
+        &:hover {
+          animation: rotation;
+          animation-duration: 1.5s;
+          animation-iteration-count: 1;
+          animation-timing-function: linear;
+        }
+        @keyframes rotation {
+          from {
+            transform: rotate(-70deg);
+          }
+          to {
+            transform: rotate(300deg);
+          }
+        }
+      }
     }
     .colors-container {
       margin-top: 22px;
@@ -124,7 +161,7 @@
           background-color: #3e5b65;
         }
         .two {
-          background-color: #eab052;
+          background-color: $color-medium-yellow;
         }
         .three {
           background-color: #a0c0cf;
@@ -154,6 +191,43 @@
         color: $color-accenture;
       }
     }
+    .moonicondown2 {
+      color: $color-medium-yellow;
+      transform: rotate(110deg);
+
+      &:hover {
+        animation: rotate;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(110deg);
+        }
+        to {
+          transform: rotate(460deg);
+        }
+      }
+    }
+    .mooniconup2 {
+      color: $color-medium-yellow;
+      transform: rotate(-70deg);
+      &:hover {
+        animation: rotation;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+      }
+      @keyframes rotation {
+        from {
+          transform: rotate(-70deg);
+        }
+        to {
+          transform: rotate(300deg);
+        }
+      }
+    }
 
     &__signup {
       flex-direction: row;
@@ -170,7 +244,9 @@
         font-family: $font-primary;
         color: $color-primary-dark;
       }
-
+      .asterisk {
+        color: $color-accenture;
+      }
       input {
         margin-top: 7px;
         margin-bottom: 10px;
@@ -183,6 +259,9 @@
         font-family: $font-primary;
         font-size: 14px;
         color: $color-light-dark;
+        &:invalid {
+          border: red 1px solid;
+        }
       }
 
       .btn-image {
@@ -195,24 +274,13 @@
         color: $color-light;
         font-family: $font-primary;
       }
-
-      .prueba {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .form-img-preview {
-        width: 50px;
-        height: 50px;
-        border: solid red 1px;
-      }
       .github {
         margin-bottom: 20px;
       }
     }
   }
   &__share {
+    margin-bottom: 60px;
     width: 320px;
     position: relative;
     border-top: 1px solid $color-form-medium;
@@ -230,27 +298,58 @@
         color: $color-accenture;
       }
     }
-    &__button {
-      margin: 60px auto;
-      width: 199px;
-      height: 50px;
-      border-radius: 12px;
-      text-align: center;
-      padding: 13px 17px;
-      font-size: rem(18);
-      color: $color-light;
-      font-family: $font-primary;
-      background-color: $color-accenture;
+    .moonicondown3 {
+      color: $color-medium-yellow;
+      transform: rotate(110deg);
 
-      .logo {
-        width: 25px;
-        height: 22px;
-        color: $color-light;
-        text-align: center;
+      &:hover {
+        animation: rotate;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
       }
-      button {
+      @keyframes rotate {
+        from {
+          transform: rotate(110deg);
+        }
+        to {
+          transform: rotate(460deg);
+        }
+      }
+    }
+    .mooniconup3 {
+      color: $color-medium-yellow;
+      transform: rotate(-70deg);
+      &:hover {
+        animation: rotation;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+      }
+      @keyframes rotation {
+        from {
+          transform: rotate(-70deg);
+        }
+        to {
+          transform: rotate(300deg);
+        }
+      }
+    }
+    &__button {
+      &__button {
+        background-color: $color-grey-button;
+        margin: 60px auto auto 60px;
+        width: 199px;
+        height: 50px;
+        border-radius: 12px;
+        text-align: center;
+        padding: 13px 17px;
+        font-size: rem(18);
+        color: $color-light;
+        font-family: $font-primary;
         text-transform: uppercase;
         font-weight: 400;
+        margin-bottom: 30px;
       }
     }
     .twitter {
@@ -277,9 +376,6 @@
         margin: 5px 0 13px 0;
       }
       & .twitter-button {
-        &:hover {
-          background-color: $color-accenture;
-        }
         background-color: $color-twitter;
         color: $color-light;
         width: 181px;
@@ -290,6 +386,10 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
+        &:hover {
+          background-color: $color-accenture;
+          //cursor: pointer;
+        }
         .fa-twitter {
           margin-right: 9.5px;
           width: 18px;
@@ -306,8 +406,14 @@
 
   .active {
     background-color: $color-accenture;
+    &:active {
+      transform: translateY(4px);
+    }
+    &:hover {
+      background-color: $color-medium-yellow;
+      cursor: url('../images/cursor-sailor.png'), auto;
+    }
   }
-
   .inactive {
     background-color: $color-grey-button;
   }

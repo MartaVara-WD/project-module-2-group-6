@@ -5,7 +5,7 @@ const uploadBtn = document.querySelector('.js__profile-trigger');
 const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
-
+let photoForm = '';
 /**
  * Recoge el archivo añadido al campo de tipo "file"
  * y lo carga en nuestro objeto FileReader para que
@@ -32,14 +32,22 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+  userData.photo = fr.result;
+  localStorage.setItem('userData', JSON.stringify(userData));
 }
 
 /**
  * Genera un click automático en nuesto campo de tipo "file"
  * que está oculto
  */
-function fakeFileClick() {
+function fakeFileClick(event) {
+  event.preventDefault();
   fileField.click();
+}
+
+function writeLocalImage(image){
+  profileImage.style.backgroundImage = `url(${image})`;
+  profilePreview.style.backgroundImage = `url(${image})`;
 }
 
 /**
