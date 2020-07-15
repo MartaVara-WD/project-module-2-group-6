@@ -248,9 +248,4 @@ function createEvent() {
     item.addEventListener('keyup', printUserData);
   }
 }
-// inputName.addEventListener ('keyup', printUserData);
-// inputJob.addEventListener ('keyup', printUserData);
-// inputPhone.addEventListener ('keyup', printUserData);
-// inputEmail.addEventListener ('keyup', printUserData);
-// inputLinkedin.addEventListener ('keyup', printUserData);
-// inputGithub.addEventListener ('keyup', printUserData);
+
