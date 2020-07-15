@@ -145,20 +145,27 @@ function printUserData() {
   sendUserData();
   
 }
-function storageData (){
+function storageData (ev){
+  ev.preventDefault();
   let recoverData= JSON.parse(localStorage.getItem('userData'));
-  console.log(recoverData);
-  debugger;
-  if( recoverData !== 0){    
+   if( recoverData !== null){    
    printName.innerHTML = recoverData.name;
    printJob.innerHTML =  recoverData.job;
    printPhone.href = `tel:` + recoverData.phone;
    printEmail.href = `mailto:` + recoverData.email;
    printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
-   printGithub.href = `https://github.com/` + recoverData.github;   
+   printGithub.href = `https://github.com/` + recoverData.github;
+   inputName.value = recoverData.name;
+   inputJob.value = recoverData.job;
+   inputPhone.value = recoverData.phone;
+   inputEmail.value = recoverData.email;
+   inputLinkedin.value = recoverData.linkedin;
+   inputGithub.value = recoverData.github;
+   number = recoverData.palette ;
+   fr.result = recoverData.photo;
   }
 }
-document.addEventListener('load', storageData);
+
 inputName.addEventListener ('keyup', printUserData);
 inputJob.addEventListener ('keyup', printUserData);
 inputPhone.addEventListener ('keyup', printUserData);
@@ -169,6 +176,7 @@ inputGithub.addEventListener ('keyup', printUserData);
 const resetButton = document.querySelector ('.js-reset-button');
 const form = document.querySelector ('.js-form');
 
+window.onload = storageData;
 //limpia el formulario(no la tarjeta)
 function resetForm() {
   form.reset();
