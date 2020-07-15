@@ -14,17 +14,35 @@
 .imagen {
   width: 100%;
   height: 457px;
-  background-color: $color-background;
+  background: linear-gradient(
+    150deg,
+    $color-medium-yellow,
+    rgb(74, 40, 196),
+    $color-background
+  );
+  background-size: 400% 300%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: BgGrandient 10s ease infinite;
   @include tablet {
     order: 2;
     width: 329px;
     margin: 20px 0;
     height: auto;
     border-radius: 10px;
+  }
+}
+@keyframes BgGrandient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -39,7 +57,7 @@
   height: 30px;
   border: solid 1px white;
   border-radius: 15px;
-  background-color: $color-background;
+  background-color: white;
   outline: none;
   &:hover {
     background-color: white;
