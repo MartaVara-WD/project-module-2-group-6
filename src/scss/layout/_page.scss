@@ -1,6 +1,9 @@
 body {
   font-family: $font-primary;
 }
+html * {
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=99842), auto;
+}
 
 .wrapper {
   width: 100%;
