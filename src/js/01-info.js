@@ -149,7 +149,7 @@ function sendUserData(data) {
   } else if((data === 'name') && (userData[data].length === 0)) {
     print[data].innerHTML = 'Nombre Apellido';
   } else if((data === 'job') && (userData[data].length === 0)) {
-    print[data].innerHTML = 'Front-en developer';
+    print[data].innerHTML = 'Front-end developer';
   } else if (data === 'phone') {
     print[data].hef = `tel:` + userData[data];
   } else if (data === 'email') {
@@ -224,7 +224,7 @@ function resetForm() {
   removeColors(palette3);
   //vuelven a escribir la info por defecto de nombre y puesto
   print.name.innerHTML = 'Nombre Apellido';
-  print.job.innerHTML = 'Front-en developer';
+  print.job.innerHTML = 'Front-end developer';
 
   localStorage.setItem('userData', JSON.stringify(userData));
   //vuelve a la imagen por defecto
