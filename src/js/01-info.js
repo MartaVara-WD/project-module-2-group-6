@@ -203,20 +203,6 @@ function tickPalette() {
     document.querySelector('.js-input-blue').checked = true;
   }
 }
-// printName.innerHTML = recoverData.name;
-// printJob.innerHTML =  recoverData.job;
-// printPhone.href = `tel:` + recoverData.phone;
-// printEmail.href = `mailto:` + recoverData.email;
-// printLinkedin.href = `https://www.linkedin.com/in/` + recoverData.linkedin;
-// printGithub.href = `https://github.com/` + recoverData.github;
-// inputName.value = recoverData.name;
-// inputJob.value = recoverData.job;
-// inputPhone.value = recoverData.phone;
-// inputEmail.value = recoverData.email;
-// inputLinkedin.value = recoverData.linkedin;
-// inputGithub.value = recoverData.github;
-// number = recoverData.palette;
-// photoForm = recoverData.photo;
 
 document.addEventListener('DOMContentLoaded', storageData);
 
