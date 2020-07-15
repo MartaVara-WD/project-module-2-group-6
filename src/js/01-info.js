@@ -166,13 +166,6 @@ function sendUserData(data) {
   } else {
     handlerStyle();
   }
-  // antiguo
-  // printName.innerHTML = userData.name;
-  // printJob.innerHTML = userData.job;
-  // printPhone.href = `tel:` + userData.phone;
-  // printEmail.href = `mailto:` + userData.email;
-  // printLinkedin.href = `https://www.linkedin.com/in/` + userData.linkedin;
-  // printGithub.href = `https://github.com/` + userData.github;
 }
 
 // esta hace magia y lo cambia en la tarjeta
