@@ -137,13 +137,6 @@ function saveFormValues(data) {
   } else {
     userData[data] = input[data];
   }
-  // userData.job = inputJob.value;
-  // userData.phone = inputPhone.value;
-  // userData.email = inputEmail.value;
-  // userData.linkedin = inputLinkedin.value;
-  // userData.github = inputGithub.value;
-  // userData.palette = number;
-  // userData.photo = photoForm;
   localStorage.setItem('userData', JSON.stringify(userData));
   return userData[data];
 }
