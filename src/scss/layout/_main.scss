@@ -2,7 +2,10 @@
 
 .page__main {
   min-height: 800px;
-  background-color: $color-tertiary-light;
+  background-image: url("../images/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin-bottom: 50px;
   @include tablet {
     display: flex;
