@@ -1,5 +1,5 @@
 .main {
-  min-height: 88vh;
+  height: 88vh;
 }
 
 .front {
@@ -67,7 +67,7 @@
 
   &__button {
     margin-top: 38.6px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     width: 129px;
     height: 42px;
     line-height: 21.5px;
@@ -77,7 +77,7 @@
     text-transform: uppercase;
     padding-top: 10px;
     border-radius: rem(21);
-    transition: background-color ease-in 0.5s;
+    transition: background-color ease-in 0.2s;
 
     &:hover {
       animation: pulse 0.5s;
@@ -86,7 +86,6 @@
     }
 
     @include tablet {
-      margin-top: 186px;
       margin-bottom: 59px;
     }
   }
